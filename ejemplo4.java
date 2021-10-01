@@ -5,8 +5,9 @@ public class ejemplo4 {
         Scanner kdb = new Scanner(System.in);
         System.out.println("Enter the side:");
         float x = kdb.nextFloat();
-        double y = x*x;
-        System.out.println(y);
+        double squareArea = x*x;
+        System.out.println(squareArea);
+        kdb.close();
 
     }
 }
