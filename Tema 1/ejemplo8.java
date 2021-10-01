@@ -5,6 +5,7 @@ public class ejemplo8 {
         System.out.println("Introduzca su edad:");
         Scanner kdb = new Scanner(System.in);
         int edad = kdb.nextInt();
+        kdb.close();
         if (edad>18) {
             System.out.println("Tienes la edad legal");
         }
