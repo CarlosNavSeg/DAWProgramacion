@@ -3,9 +3,12 @@ import java.util.Scanner;
 public class ejemplo14 {
     public static void main(String[] args) {
         Scanner kdb = new Scanner(System.in);
+
         System.out.println("Introduzca el valor númerico de la nota:");
         double nota = kdb.nextDouble();
+
         kdb.close();
+
         if (nota < 0 || nota > 10 ) {
             System.out.println("La nota es inválida");
         }
@@ -30,13 +33,6 @@ public class ejemplo14 {
             else if (nota >= 9 && nota <= 10) {
                 System.out.println("La nota es sobresaliente");
             }
-        }
-    
-
-        
-        
-
-            
-    
+        } 
 }
     

@@ -4,9 +4,12 @@ public class ejemplo15 {
     public static void main(String[] args) {
         //Hay que buscar optimizar
         Scanner kdb = new Scanner(System.in);
+
         System.out.println("Introduzca un entero entre 1 y 10 para ver su valor en letra");
         int caso = kdb.nextInt();
+
         kdb.close();
+        
         switch (caso) {
             case 1:
             System.out.println("a");

@@ -6,6 +6,7 @@ public class ejemplo9 {
 
         Scanner kdb = new Scanner(System.in);
         int edad = kdb.nextInt();
+        
         kdb.close();
 
         if (edad>=18) {
