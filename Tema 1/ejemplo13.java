@@ -9,7 +9,7 @@ public class ejemplo13 {
 
         System.out.println("Introduzca el segundo valor");
         double segon = kdb.nextDouble();
-        
+
         System.out.println("Presione 1 si quiere orden ascendente y 2 si quiere orden descendente");
         int decisión = kdb.nextInt();
 
@@ -17,21 +17,22 @@ public class ejemplo13 {
 
         if (decisión == 1) {
             if (primer>segon) {
-                System.out.println(primer + "," + segon);
-            }
-            else  {
-                System.out.println(segon + "," + primer);
-            }
-        }
-        if (decisión == 2) {
-            if (primer<segon) {
-                System.out.println(primer + "," + segon);
-            }
-            else  {
                 System.out.println(segon + "," + primer);
             }
 
-        
+            else  {
+                System.out.println(primer + "," + segon);
+            }
+        }
+
+        if (decisión == 2) {
+            if (primer<segon) {
+                System.out.println(segon + "," + primer);
+            }
+
+            else  {
+                System.out.println(primer + "," + segon);
+            }        
         }
     }
 }
