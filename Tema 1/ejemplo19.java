@@ -16,10 +16,12 @@ public class ejemplo19 {
           salariobruto = salariobruto + 1.5 * horas;
 
           if (salariobruto > 500 && salariobruto <= 900) {
-           double salarioneto = (salariobruto + salariobruto) *0.75;
+           double salarioneto = salariobruto*0.75;
+           System.out.println(salarioneto + salariobruto);
 
             if (salarioneto>900) {
-                salarioneto = (salarioneto + salarioneto) * 0.55;
+                double salarioneto2 = salarioneto * 0.55;
+                System.out.println(salarioneto2 + salarioneto);
             }
             else {
                 System.out.println(salarioneto);
