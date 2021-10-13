@@ -2,6 +2,6 @@
     "git.ignoreLimitWarning": true,
     "java.project.sourcePaths": [
         "Tema 1",
-        "Controles."
+        "Controles"
     ]
 }
