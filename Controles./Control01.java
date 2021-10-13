@@ -5,7 +5,6 @@ public class Control01 {
         // Ya sabemos que necesitamos datos de entrada por teclado, así que declaramos una variable Scanner.
         Scanner datospoligono = new Scanner(System.in);
         
-
         //Esta variable será usada para almacenar el número de lados, usamos un byte porque la probabilidad de
         //que un polígono introducido por el usuario tenga un número de lados mayor a 127 es muy baja, además de que los lados siempre son enteros.
         System.out.println("Dime el número de lados del polígono");
@@ -20,7 +19,7 @@ public class Control01 {
             System.out.println("El perímetro del triangulo es " + longitud*lados);
         }
 
-        if (lados == 4) {
+        else if (lados == 4) {
             System.out.println("Dime la longitud del lado del polígono usa una ',' para los decimales");
             double longitud = datospoligono.nextDouble();
             System.out.println("El perímetro del cuadrado es " + longitud*lados);

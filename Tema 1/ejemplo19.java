@@ -16,15 +16,21 @@ public class ejemplo19 {
           salariobruto = salariobruto + 1.5 * horas;
 
           if (salariobruto > 500 && salariobruto <= 900) {
-           double salarioneto = salariobruto*0.75;
-           System.out.println(salarioneto + salariobruto);
+            
+           double impuesto1 = salariobruto*0.25;
+           double salarioTot = salariobruto - impuesto1;
 
-            if (salarioneto>900) {
-                double salarioneto2 = salarioneto * 0.55;
-                System.out.println(salarioneto2 + salarioneto);
+           System.out.println(salarioTot);
+           System.out.println("Impuestos:" + impuesto1);
+
+            if (salarioTot>900) {
+                double impuesto2 = salarioTot * 0.45 ;
+                System.out.println(salarioTot - impuesto2);
+                System.out.println("Impuestos:" + (impuesto1 + impuesto2));
             }
             else {
-                System.out.println(salarioneto);
+                System.out.println(salarioTot);
+                System.out.println("Impuestos:" + impuesto1);
             }
           }
 
@@ -36,6 +42,7 @@ public class ejemplo19 {
        else {
             System.out.println(salariobruto);
         }
+        
           salariohora.close();
 
     }
