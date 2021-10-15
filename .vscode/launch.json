@@ -1,0 +1,211 @@
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Control01",
+            "request": "launch",
+            "mainClass": "Control01",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejemplo1",
+            "request": "launch",
+            "mainClass": "Ejemplo1",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo10",
+            "request": "launch",
+            "mainClass": "ejemplo10",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo11",
+            "request": "launch",
+            "mainClass": "ejemplo11",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo12",
+            "request": "launch",
+            "mainClass": "ejemplo12",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo13",
+            "request": "launch",
+            "mainClass": "ejemplo13",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo14",
+            "request": "launch",
+            "mainClass": "ejemplo14",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo15",
+            "request": "launch",
+            "mainClass": "ejemplo15",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo16",
+            "request": "launch",
+            "mainClass": "ejemplo16",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo17",
+            "request": "launch",
+            "mainClass": "ejemplo17",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo18",
+            "request": "launch",
+            "mainClass": "ejemplo18",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo19",
+            "request": "launch",
+            "mainClass": "ejemplo19",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo2",
+            "request": "launch",
+            "mainClass": "ejemplo2",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo20",
+            "request": "launch",
+            "mainClass": "ejemplo20",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo21",
+            "request": "launch",
+            "mainClass": "ejemplo21",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo22",
+            "request": "launch",
+            "mainClass": "ejemplo22",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo23",
+            "request": "launch",
+            "mainClass": "ejemplo23",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo25",
+            "request": "launch",
+            "mainClass": "ejemplo25",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo26",
+            "request": "launch",
+            "mainClass": "ejemplo26",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo27",
+            "request": "launch",
+            "mainClass": "ejemplo27",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo3",
+            "request": "launch",
+            "mainClass": "ejemplo3",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo4",
+            "request": "launch",
+            "mainClass": "ejemplo4",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo5",
+            "request": "launch",
+            "mainClass": "ejemplo5",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo6",
+            "request": "launch",
+            "mainClass": "ejemplo6",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo7",
+            "request": "launch",
+            "mainClass": "ejemplo7",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo8",
+            "request": "launch",
+            "mainClass": "ejemplo8",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo9",
+            "request": "launch",
+            "mainClass": "ejemplo9",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        },
+        {
+            "type": "java",
+            "name": "Launch tutorial",
+            "request": "launch",
+            "mainClass": "tutorial",
+            "projectName": "DAWProgramacion-1_58f6a8f6"
+        }
+    ]
+}
