@@ -10,6 +10,10 @@ public class ejemplo30 {
         int longitud = palabra.length();
         if (palabra.charAt(0) != palabra.charAt(longitud-1)) {
             políndroma = false;
+            System.out.println("No es políndroma, el programa terminará");
+        }
+        else {
+            System.out.println("Palabra políndroma, puede continuar");
         }
         fraseusuario.close();
 
