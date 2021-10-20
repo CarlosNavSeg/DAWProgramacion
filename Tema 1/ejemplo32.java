@@ -9,9 +9,11 @@ public class ejemplo32 {
             a[i] = llenararray.nextInt();
         }
 
+ 
+
         llenararray.close();
 
-        
+
 
 
     }
