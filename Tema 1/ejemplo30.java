@@ -11,6 +11,7 @@ public class ejemplo30 {
         if (palabra.charAt(0) != palabra.charAt(longitud-1)) {
             políndroma = false;
         }
+        fraseusuario.close();
 
     }
     }
