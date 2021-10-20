@@ -8,9 +8,7 @@ public class ejemplo32 {
         for (int i = 0; i<a.length ; i++) {
             a[i] = llenararray.nextInt();
         }
-
- 
-
+        
         llenararray.close();
 
 
