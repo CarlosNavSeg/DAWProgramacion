@@ -14,6 +14,10 @@ public class ejemplo24 {
             grade = profesor.nextDouble();
             sum = sum + grade;
             i++;
+            if (grade == -1) {
+                sum = sum + grade;
+                i--;
+            }
             if (grade == 10) {
                 wasTen = true;
             }
