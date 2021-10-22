@@ -11,6 +11,10 @@ public class ejemplo32 {
         
         llenararray.close();
 
+        for (int j = a.length-1; j>=0; j--) {
+            System.out.println(a[j]);
+        }
+
 
 
 
