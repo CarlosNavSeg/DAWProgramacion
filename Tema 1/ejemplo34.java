@@ -43,6 +43,8 @@ public class ejemplo34 {
         System.out.println("Introduzca la parte númerica de su NIE");
         int nie = identificacion.nextInt();
 
+        identificacion.close();
+
         System.out.println("El NIE a partir del cual calcularemos es: " +letracontrol+ nie);
 
         if (letracontrol == 'X') {
