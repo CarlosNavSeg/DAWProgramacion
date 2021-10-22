@@ -10,9 +10,16 @@ public class ejemplo25 {
         numeroafactorizar.close();
         int comienzo = 1;
 
-        for (int i=1; i <= numero ; i++) {
+
+
+        for (int i=2; i <= numero ; i++) {
             int resultado = comienzo * i;
             comienzo = resultado;
+            System.out.println(comienzo);
+        }
+
+
+        if(numero == 0) {
             System.out.println(comienzo);
         }
 
