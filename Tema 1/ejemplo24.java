@@ -17,12 +17,14 @@ public class ejemplo24 {
             if (grade == 10) {
                 wasTen = true;
             }
-
+            
         }
 
         profesor.close();
 
+        if (i>0) {
         System.out.println("Average" + sum/i);
+    }
 
         if(wasTen == true) {
             System.out.println("There was a 10");
