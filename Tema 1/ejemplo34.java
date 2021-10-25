@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class ejemplo34 {
     public static void main(String[] args) {
         Scanner identificacion = new Scanner(System.in);
-        char letrasdni [];
+        char letrasdni[];
         char letracontrol;
-        letrasdni = new char [23];
+        letrasdni = new char[23];
         letrasdni[0] = 'T';
         letrasdni[1] = 'R';
         letrasdni[2] = 'W';
@@ -33,10 +33,9 @@ public class ejemplo34 {
         System.out.println("Introduzca la fecha de origen de su NIE");
         int digitocontrol = identificacion.nextInt();
 
-        if (digitocontrol<2008) {
+        if (digitocontrol < 2008) {
             letracontrol = 'X';
-        }
-        else {
+        } else {
             letracontrol = 'Y';
         }
 
@@ -45,16 +44,14 @@ public class ejemplo34 {
 
         identificacion.close();
 
-        System.out.println("El NIE a partir del cual calcularemos es: " +letracontrol+ nie);
+        System.out.println("El NIE a partir del cual calcularemos es: " + letracontrol + nie);
 
         if (letracontrol == 'X') {
-            int letraresultado = nie%23;
+            int letraresultado = nie % 23;
             System.out.println("El NIE calculado es: " + nie + letrasdni[letraresultado]);
-        }
-        else if (letracontrol == 'Y') {
-            nie = 10000000 + nie;
-            int letraresultado = nie%23;
-            nie = nie - 10000000;
+        } else if (letracontrol == 'Y') {
+            int letraresultado = (10000000 + nie) % 23;
+            ;
             System.out.println("El NIE calculado es: Y" + nie + letrasdni[letraresultado]);
         }
     }
