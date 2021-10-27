@@ -1,7 +1,14 @@
 public class ArgumentosMainSuma {
     public static void main(String[] args) {
-        for(int i = 1; i<args.length ; i++) {
-            System.out.println(args[i] += args[i-1]);
+
+        System.out.println("Argumentos:" + args.length);
+
+        int suma = 0;
+
+        for(int i = 0; i<args.length ; i++) {
+            int temp = Integer.parseInt(args[i]);
+            suma = temp + suma;
         }
+        System.out.println(suma);
     }
 }

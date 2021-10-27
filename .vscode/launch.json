@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ArgumentosMainSuma",
+            "request": "launch",
+            "mainClass": "ArgumentosMainSuma",
+            "projectName": "DAWProgramacion_f510f0ff"
+        },
+        {
+            "type": "java",
             "name": "Launch ejemplo34",
             "request": "launch",
             "mainClass": "ejemplo34",
