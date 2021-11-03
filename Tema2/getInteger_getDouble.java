@@ -15,7 +15,6 @@ public class getInteger_getDouble {
             valor = token.next();
 
             Scanner comprobador = new Scanner(valor);
-            comprobador.hasNextInt();
 
             if (comprobador.hasNextInt() == true) {
                 hayInteger = true;
