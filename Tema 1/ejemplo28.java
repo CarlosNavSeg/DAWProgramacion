@@ -11,7 +11,7 @@ public class ejemplo28 {
 
         valorAComprobar.close();
 
-        for(int i=2; i<numPrimoono/2 ; i++ ) {
+        for(int i=2; i <= numPrimoono/2 ; i++ ) {
 
             if(numPrimoono % i == 0) {
                 divisorEncontrado = true;
