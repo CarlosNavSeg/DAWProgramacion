@@ -7,9 +7,12 @@ public class E08 {
         Scanner numeroadescomponer = new Scanner(System.in);
 
         System.out.print("Ingrese un numero: ");
-        double numero = numeroadescomponer.nextDouble();
+        String numero = numeroadescomponer.next();
 
-        System.out.println(x);
+        int partentera = Integer.parseInt(numero);
+        double partedecimal = Double.parseDouble(numero);
+
+        System.out.println(partedecimal - partentera);
 
         numeroadescomponer.close();
     }
