@@ -14,5 +14,7 @@ public class E02 {
 
         System.out.println("Área: " + perimetro/2*radio);
 
+        datosproblema.close();
+
     }
 }
