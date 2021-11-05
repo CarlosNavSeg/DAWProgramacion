@@ -9,7 +9,7 @@ public class E08 {
         System.out.print("Ingrese un numero: ");
         String numero = numeroadescomponer.next();
 
-        System.out.println(numero.charAt(numero.lastIndexOf('.' + 1)));
+        System.out.println("0" + numero.substring(numero.lastIndexOf('.')));
 
         numeroadescomponer.close();
     }
