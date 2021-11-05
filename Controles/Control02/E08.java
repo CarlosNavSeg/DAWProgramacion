@@ -9,10 +9,7 @@ public class E08 {
         System.out.print("Ingrese un numero: ");
         String numero = numeroadescomponer.next();
 
-        int partentera = Integer.parseInt(numero);
-        double partedecimal = Double.parseDouble(numero);
-
-        System.out.println(partedecimal - partentera);
+        System.out.println(numero.charAt(numero.lastIndexOf('.' + 1)));
 
         numeroadescomponer.close();
     }
