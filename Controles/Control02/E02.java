@@ -8,10 +8,11 @@ public class E02 {
 
         System.out.print("Ingrese el radio: ");
         double radio = datosproblema.nextDouble();
-        
+
         System.out.print("Perimetro: ");
         double perimetro = datosproblema.nextDouble();
 
         System.out.println("Área: " + perimetro/2*radio);
+
     }
 }
