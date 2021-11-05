@@ -12,7 +12,7 @@ public class E07 {
         System.out.print("Cantidad de horas: ");
         int horaspasadas = reloj.nextInt();
 
-        System.out.println("En " + horaspasadas + " horas, el reloj marcara las " + (hora + horaspasadas));
+        System.out.println("En " + horaspasadas + " horas, el reloj marcara las " + (hora + horaspasadas) % 12);
 
         reloj.close();
     }
