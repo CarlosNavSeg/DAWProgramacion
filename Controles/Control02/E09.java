@@ -15,7 +15,7 @@ public class E09 {
         System.out.print("Ingrese nota laboratorio: ");
         double notalaboratorio = notas.nextDouble();
         
-        double notacertamen3 = (((notacertamen1 + notacertamen2)/3) * 0.7) + (notalaboratorio * 0.3) - 60;
+        double notacertamen3 = (((notacertamen1 + notacertamen2)/3) * 0.7) + (notalaboratorio * 0.3)%60;
 
         System.out.println("Necesita nota " + notacertamen3 + " en el certamen 3");
 

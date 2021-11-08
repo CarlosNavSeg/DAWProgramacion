@@ -7,6 +7,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ejemplo37",
+            "request": "launch",
+            "mainClass": "ejemplo37",
+            "projectName": "DAWProgramacion_7410982c"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo36",
+            "request": "launch",
+            "mainClass": "ejemplo36",
+            "projectName": "DAWProgramacion_7410982c"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo35",
+            "request": "launch",
+            "mainClass": "ejemplo35",
+            "projectName": "DAWProgramacion_7410982c"
+        },
+        {
+            "type": "java",
             "name": "Launch E10",
             "request": "launch",
             "mainClass": "Control02.E10",
