@@ -13,8 +13,9 @@ public class ejemplo41 {
 
         for (int i = 2; i < numerosfibonacci.length; i++) {
             double resultado = numerosfibonacci[i] = numerosfibonacci[i-1] + numerosfibonacci[i-2];
-            double relacion = 
+            double relacion = resultado/numerosfibonacci[i-1];
             System.out.println(resultado);
+            System.out.println("Relacion: " + relacion);
         }
 
         funcionfibonacci.close();
