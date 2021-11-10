@@ -10,7 +10,7 @@ public class E10 {
         System.out.print("Ingrese temperatura original: ");
         double temperaturaoriginal = temperatura.nextDouble();
 
-        System.out.println(((Math.pow(67, 2/3) * 3.7 * Math.pow(1.038, 1/3)) / 0.0054 * Math.PI * Math.PI * (Math.pow(4*Math.PI/3, 4/3))) * Math.log(0.76*((100-temperaturaoriginal)/(63- temperaturaoriginal))));
+        System.out.println(((Math.pow(67, 2/3) * 3.7 * Math.pow(1.038, 1/3)) / 0.0054 * Math.PI * Math.PI * (Math.pow(4*Math.PI/3, 4/3))) * Math.log(0.76*(100-temperaturaoriginal)/((65- temperaturaoriginal))));
         
         temperatura.close();
     }

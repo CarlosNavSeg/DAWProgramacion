@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class E09 {
     public static void main(String[] args) {
         Scanner notas = new Scanner(System.in);
-
+        
         System.out.print("Ingrese nota certamen 1: ");
         double notacertamen1 = notas.nextDouble();
 

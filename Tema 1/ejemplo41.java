@@ -1,11 +1,10 @@
 import java.util.Scanner;
-
-public class ejemplo40 {
+public class ejemplo41 {
     public static void main(String[] args) {
         Scanner funcionfibonacci = new Scanner(System.in);
 
         System.out.print("Dame dos números que empiecen la función: ");
-        double [] numerosfibonacci = new double [100];
+        double [] numerosfibonacci = new double [10];
         double f0 = funcionfibonacci.nextInt();
         double f1 = funcionfibonacci.nextInt();
 
@@ -14,6 +13,7 @@ public class ejemplo40 {
 
         for (int i = 2; i < numerosfibonacci.length; i++) {
             double resultado = numerosfibonacci[i] = numerosfibonacci[i-1] + numerosfibonacci[i-2];
+            double relacion = 
             System.out.println(resultado);
         }
 
