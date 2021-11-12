@@ -10,6 +10,13 @@
             "name": "Launch ejemplo45",
             "request": "launch",
             "mainClass": "ejemplo45",
+            "projectName": "DAWProgramacion_33dd3974"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo45",
+            "request": "launch",
+            "mainClass": "ejemplo45",
             "projectName": "DAWProgramacion_7410982c"
         },
         {
