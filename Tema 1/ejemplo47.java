@@ -14,5 +14,8 @@ public class ejemplo47 {
             System.out.println("* " + cadenas[i] + "                    *");
         }
         System.out.println("********************");
+
+        cadenasTexto.close();
+        
     }
 }
