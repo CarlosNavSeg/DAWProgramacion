@@ -181,14 +181,23 @@ public class classpathEjerciciosValueMethod {
         int[] numeros;
         numeros = new int[3];
 
-        int numeromayor = 0;
+        int elMayor = 0;
 
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = valoresdeUsuario.nextInt();
         }
 
+        for (int i = 0; i < numeros.length -1; i++) {
+            if (numeros[i] < numeros[i+1]) {
+                elMayor = numeros[i+1];
+            }
+            else {
+                elMayor = numeros[i];
+            }
+        }
 
-        System.out.println(numeromayor);
+
+        System.out.println("El mayor es: " + elMayor);
 
         valoresdeUsuario.close();
 
