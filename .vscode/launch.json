@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch classpathEjerciciosValueMethod",
+            "request": "launch",
+            "mainClass": "classpathEjerciciosValueMethod",
+            "projectName": "DAWProgramacion_33dd3974"
+        },
+        {
+            "type": "java",
             "name": "Launch ejemplo47",
             "request": "launch",
             "mainClass": "ejemplo47",

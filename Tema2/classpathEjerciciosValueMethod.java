@@ -29,6 +29,15 @@ public class classpathEjerciciosValueMethod {
         double resultado = Math.pow(valorAElevar, exponente);
         return resultado;
     }
+    
+    public static double PotenciaRecursiva(double base, int exponente) {
+        if( exponente == 0) {
+            return 1;
+        }
+        else {
+            return(base * PotenciaRecursiva(base, exponente-1));
+        }
+    }
 
     public static int positivos(int[] cantidadDePositivos) {
 
@@ -198,6 +207,8 @@ public class classpathEjerciciosValueMethod {
         // System.out.println(esTriangulo(ladoa, ladob, ladoc));ç
 
         // System.out.println(Potencia (2.0 , 2));
+
+        //System.out.println(PotenciaRecursiva(2, 1));
 
         // int [] arrayPositivos = new int[3];
         // System.out.println(positivos(arrayPositivos));
