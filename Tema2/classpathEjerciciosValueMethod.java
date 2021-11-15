@@ -217,7 +217,7 @@ public class classpathEjerciciosValueMethod {
 
         // System.out.println(esPrimo(18));
 
-        // primosDe3A100();
+        //primosDe3A100();
 
         // Mayor(18);
 
@@ -225,7 +225,7 @@ public class classpathEjerciciosValueMethod {
 
         // rangoDeNotas(8.0);
 
-       //MayorDeTres();
+        //MayorDeTres();
 
         // valoresDeUsuario.close();
 
