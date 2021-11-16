@@ -232,7 +232,7 @@ public class classpathEjerciciosValueMethod {
 
         // OrdenAscendente(2, 5);
 
-        // rangoDeNotas(8.0);
+        rangoDeNotas(8.0);
 
         //MayorDeTres();
 
