@@ -1,8 +1,9 @@
 {
     "git.ignoreLimitWarning": true,
     "java.project.sourcePaths": [
+        "Tema2",
         "Tema 1",
         "Controles",
-        "Tema2"
+        "Evaluacion2"
     ]
 }
