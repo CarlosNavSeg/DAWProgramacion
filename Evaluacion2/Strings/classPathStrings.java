@@ -1,5 +1,7 @@
 package Strings;
 
+import Arrays.duplicadosEnArray;
+
 class classPathStrings {
 
     public static int comparadoraSinMayusculas() {
@@ -464,9 +466,52 @@ class classPathStrings {
 
         System.out.println("son digitos, hay " + contadorDeDigitos + " digitos en la cadena");
     }
+    public static void parentizado(String str1) {
+
+        String desdePrimerParentesis = "";
+        String fraseparentizada = "";
+        boolean frasecomprobada = false;
+
+        while (frasecomprobada == false) {
+            
+            if(str1.indexOf("(") != -1) {
+            
+                desdePrimerParentesis = str1.substring(str1.indexOf("("), str1.length());
+
+                if(desdePrimerParentesis.indexOf(")") == -1) {
+                    System.out.println("No hay ningun parentesis que cierre al abierto");
+                    frasecomprobada = true;
+                }
+                           
+            }
+            else {
+                System.out.println("La cadena " + desdePrimerParentesis + " no tiene ningun parentesis.");
+                frasecomprobada = true;
+            }
+
+            if(desdePrimerParentesis.isEmpty() != true) {
+
+                System.out.println("Hay dos paréntesis en la cadena " + fraseparentizada + " ahora comprobemos que estan bien parentizados");
+
+                if(desdePrimerParentesis.indexOf("(") < desdePrimerParentesis.indexOf(")")) {
+                    System.out.println("La frase no está bien parentizada ya que " + str1 + " tiene parentesis en medio.");
+                    frasecomprobada = true;
+                    desdePrimerParentesis = "";
+                }
+                else {
+                    System.out.println("La frase " + str1 + " está bien parentizada.");
+                    frasecomprobada = true;
+                    desdePrimerParentesis = "";
+                }
+            }
+
+            
+        }
+
+    }
 
     public static void main(String[] args) {
-        hayDigitoX("el 20 y el 400 son números multiplos 1 de otro 4");
+        parentizado("hola soy Carlos el (rey (del Universo) me entiendes))))");
     }
 
 }
