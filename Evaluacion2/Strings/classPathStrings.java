@@ -1,5 +1,7 @@
 package Strings;
 
+import java.util.Scanner;
+
 class classPathStrings {
 
     public static int comparadoraSinMayusculas() {
@@ -535,13 +537,65 @@ class classPathStrings {
 
         return fraseinvertida;
     }
-        public static String[] palabras(String frase) {
-            
+
+    public static String[] palabras(String frase) {
+        String[] palabras = new String[frase.length()];
+
+        String resto = frase;
+        int contador = 0;
+
+        String palabra = frase.substring(0, frase.indexOf(" "));
+
+        while (!resto.isEmpty()) {
+            palabras[contador] = palabra;
+            contador++;
+            resto = resto.substring(palabra.length() + 1, resto.length());
+            if (resto.indexOf(" ") != -1) {
+                palabra = resto.substring(0, resto.indexOf(" "));
+            } else {
+                palabra = resto;
+                palabras[contador] = palabra;
+                break;
+            }
+
         }
+        return palabras;
+    }
+
+    public static String siglas(String[] palabras) {
+        String str1 = leerCadena();
+        palabras = palabras(str1);
+        String siglado = "";
+        String palabramayus;
+        for (int i = 0; i < palabras.length; i++) {
+            if (palabras[i] != null) {
+            palabramayus = palabras[i].toUpperCase();
+            
+                if (palabras[i].charAt(0) == palabramayus.charAt(0)) {
+                    siglado += palabras[i].charAt(0);
+                }
+        }
+        else {
+            break;
+        }
+        }
+        return siglado;
+    }
+
+    public static String leerCadena() {
+        Scanner kdb = new Scanner(System.in);
+
+        System.out.println("Introduce una frase");
+        String fraseusuario = kdb.nextLine();
+        
+        kdb.close();
+        return fraseusuario;
+    }
 
     public static void main(String[] args) {
-        
-        System.out.println(invertir("hola soy Carlos el (rey (del Universo) me entiendes))))"));
+
+        String[] opcionales = new String[10];
+        System.out.println(siglas(opcionales));
     }
 
 }
