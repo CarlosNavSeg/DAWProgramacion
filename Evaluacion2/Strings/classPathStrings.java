@@ -1,7 +1,5 @@
 package Strings;
 
-import Arrays.duplicadosEnArray;
-
 class classPathStrings {
 
     public static int comparadoraSinMayusculas() {
@@ -457,7 +455,7 @@ class classPathStrings {
         System.out.print("Estos: ");
         for (int i = 0; i < digitos.length; i++) {
             if (digitos[i] == null) {
-                
+
             } else {
                 System.out.print(digitos[i] + " ");
                 contadorDeDigitos++;
@@ -466,6 +464,7 @@ class classPathStrings {
 
         System.out.println("son digitos, hay " + contadorDeDigitos + " digitos en la cadena");
     }
+
     public static void parentizado(String str1) {
 
         String desdePrimerParentesis = "";
@@ -473,45 +472,73 @@ class classPathStrings {
         boolean frasecomprobada = false;
 
         while (frasecomprobada == false) {
-            
-            if(str1.indexOf("(") != -1) {
-            
+
+            if (str1.indexOf("(") != -1) {
+
                 desdePrimerParentesis = str1.substring(str1.indexOf("("), str1.length());
 
-                if(desdePrimerParentesis.indexOf(")") == -1) {
+                if (desdePrimerParentesis.indexOf(")") == -1) {
                     System.out.println("No hay ningun parentesis que cierre al abierto");
                     frasecomprobada = true;
                 }
-                           
-            }
-            else {
+
+            } else {
                 System.out.println("La cadena " + desdePrimerParentesis + " no tiene ningun parentesis.");
                 frasecomprobada = true;
             }
 
-            if(desdePrimerParentesis.isEmpty() != true) {
+            if (desdePrimerParentesis.isEmpty() != true) {
 
-                System.out.println("Hay dos paréntesis en la cadena " + fraseparentizada + " ahora comprobemos que estan bien parentizados");
+                System.out.println("Hay dos paréntesis en la cadena " + fraseparentizada
+                        + " ahora comprobemos que estan bien parentizados");
 
-                if(desdePrimerParentesis.indexOf("(") < desdePrimerParentesis.indexOf(")")) {
-                    System.out.println("La frase no está bien parentizada ya que " + str1 + " tiene parentesis en medio.");
+                if (desdePrimerParentesis.indexOf("(") < desdePrimerParentesis.indexOf(")")) {
+                    System.out.println(
+                            "La frase no está bien parentizada ya que " + str1 + " tiene parentesis en medio.");
                     frasecomprobada = true;
                     desdePrimerParentesis = "";
-                }
-                else {
+                } else {
                     System.out.println("La frase " + str1 + " está bien parentizada.");
                     frasecomprobada = true;
                     desdePrimerParentesis = "";
                 }
             }
 
-            
         }
 
     }
 
+    public static String invertir(String str1) {
+        int contador = 0;
+        String unidadpalabra = "";
+        String fraseinvertida = "";
+        String[] fraseenpalabras = new String[100];
+        String resto = str1;
+
+        while (!resto.isEmpty()) {
+            if (resto.indexOf(" ") != -1) {
+                unidadpalabra = resto.substring(0, resto.indexOf(" "));
+            } else {
+                fraseenpalabras[contador] = resto;
+                break;
+            }
+            fraseenpalabras[contador] = unidadpalabra;
+            contador++;
+            resto = resto.substring(unidadpalabra.length() + 1, resto.length());
+
+        }
+
+        for (int i = contador; i >= 0; i--) {
+            fraseinvertida += fraseenpalabras[i];
+            fraseinvertida += " ";
+        }
+
+        return fraseinvertida;
+    }
+
     public static void main(String[] args) {
-        parentizado("hola soy Carlos el (rey (del Universo) me entiendes))))");
+        
+        System.out.println(invertir("hola soy Carlos el (rey (del Universo) me entiendes))))"));
     }
 
 }
