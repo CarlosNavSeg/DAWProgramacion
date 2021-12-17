@@ -569,15 +569,14 @@ class classPathStrings {
         String palabramayus;
         for (int i = 0; i < palabras.length; i++) {
             if (palabras[i] != null) {
-            palabramayus = palabras[i].toUpperCase();
-            
+                palabramayus = palabras[i].toUpperCase();
+
                 if (palabras[i].charAt(0) == palabramayus.charAt(0)) {
                     siglado += palabras[i].charAt(0);
                 }
-        }
-        else {
-            break;
-        }
+            } else {
+                break;
+            }
         }
         return siglado;
     }
@@ -587,19 +586,108 @@ class classPathStrings {
 
         System.out.println("Introduce una frase");
         String fraseusuario = kdb.nextLine();
-        
+
         kdb.close();
         return fraseusuario;
     }
 
-    public static boolean Alfabetica(String str1, char a, char b) {
-        
+    public static boolean Alfabetica() {
+        String str1 = leerCadena();
+
+        for (int i = 1; i < str1.length() - 1; i++) {
+            if (str1.charAt(i) < str1.charAt(i + 1)) {
+
+            } else {
+                return false;
+
+            }
+        }
+        return true;
+
     }
+
+    public static String pasatiempos() {
+        String str1 = leerCadena();
+
+        String str1Upper = str1.toUpperCase();
+
+        String conElPunto = "";
+
+        String registro = "";
+
+        for (int i = 0; i < str1.length(); i++) {
+
+            if(str1Upper.charAt(i) == 'A') {
+                if(conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+                else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+            }
+            else if(str1Upper.charAt(i) == 'E') {
+                if(conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+                else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+            }
+        
+            else if(str1Upper.charAt(i) == 'O') {
+                if(conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+                else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+            }
+            
+            else if(str1Upper.charAt(i) == 'I') {
+                if(conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+                else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+        }
+            else if(str1Upper.charAt(i) == 'U') {
+                if(conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+                else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+            
+               }  
+              
+    }
+    return registro;  
+}
 
     public static void main(String[] args) {
 
-        String[] opcionales = new String[10];
-        System.out.println(siglas(opcionales));
+        System.out.println(pasatiempos());
     }
 
 }
