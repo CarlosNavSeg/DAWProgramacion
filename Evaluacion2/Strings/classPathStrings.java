@@ -587,7 +587,6 @@ class classPathStrings {
         System.out.println("Introduce una frase");
         String fraseusuario = kdb.nextLine();
 
-        kdb.close();
         return fraseusuario;
     }
 
@@ -617,77 +616,111 @@ class classPathStrings {
 
         for (int i = 0; i < str1.length(); i++) {
 
-            if(str1Upper.charAt(i) == 'A') {
-                if(conElPunto.isEmpty()) {
+            if (str1Upper.charAt(i) == 'A') {
+                if (conElPunto.isEmpty()) {
                     conElPunto += str1.substring(0, i);
                     conElPunto += ".";
                     registro = conElPunto;
+                } else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
                 }
-                else {
+            } else if (str1Upper.charAt(i) == 'E') {
+                if (conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                } else {
                     conElPunto += str1.substring(conElPunto.length(), i);
                     conElPunto += ".";
                     registro = conElPunto;
                 }
             }
-            else if(str1Upper.charAt(i) == 'E') {
-                if(conElPunto.isEmpty()) {
+
+            else if (str1Upper.charAt(i) == 'O') {
+                if (conElPunto.isEmpty()) {
                     conElPunto += str1.substring(0, i);
                     conElPunto += ".";
                     registro = conElPunto;
-                }
-                else {
+                } else {
                     conElPunto += str1.substring(conElPunto.length(), i);
                     conElPunto += ".";
                     registro = conElPunto;
                 }
             }
-        
-            else if(str1Upper.charAt(i) == 'O') {
-                if(conElPunto.isEmpty()) {
+
+            else if (str1Upper.charAt(i) == 'I') {
+                if (conElPunto.isEmpty()) {
                     conElPunto += str1.substring(0, i);
                     conElPunto += ".";
                     registro = conElPunto;
-                }
-                else {
+                } else {
                     conElPunto += str1.substring(conElPunto.length(), i);
                     conElPunto += ".";
                     registro = conElPunto;
                 }
+            } else if (str1Upper.charAt(i) == 'U') {
+                if (conElPunto.isEmpty()) {
+                    conElPunto += str1.substring(0, i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                } else {
+                    conElPunto += str1.substring(conElPunto.length(), i);
+                    conElPunto += ".";
+                    registro = conElPunto;
+                }
+
             }
-            
-            else if(str1Upper.charAt(i) == 'I') {
-                if(conElPunto.isEmpty()) {
-                    conElPunto += str1.substring(0, i);
-                    conElPunto += ".";
-                    registro = conElPunto;
-                }
-                else {
-                    conElPunto += str1.substring(conElPunto.length(), i);
-                    conElPunto += ".";
-                    registro = conElPunto;
-                }
+
         }
-            else if(str1Upper.charAt(i) == 'U') {
-                if(conElPunto.isEmpty()) {
-                    conElPunto += str1.substring(0, i);
-                    conElPunto += ".";
-                    registro = conElPunto;
-                }
-                else {
-                    conElPunto += str1.substring(conElPunto.length(), i);
-                    conElPunto += ".";
-                    registro = conElPunto;
-                }
-            
-               }  
-              
+        return registro;
     }
-    return registro;  
-}
+
+    public static String encriptar() {
+
+        String str1 = leerCadena();
+
+        char [] letrasalmacenadas = new char[str1.length()];
+
+        boolean esnumero = false;
+
+        String k = "";
+
+        while(esnumero == false) {
+
+        System.out.println("Introduce un número y moveremos los carácteres tantos numeros a la derecha como introduzcas");
+        k = leerCadena();
+        
+        for (int i = 1; i < k.length(); i++) {
+            if(k.charAt(i) > 0 || k.charAt(i) < 9) {
+                esnumero = true;
+            }
+            else {
+                
+            }
+        }
+    }
+        
+        Integer.parseInt(k);
+
+        for (int i = 0; i < str1.length(); i++) {
+            letrasalmacenadas[i] = str1.charAt(i);
+        }
+        String encriptada = "";
+        for (int i = 0; i < letrasalmacenadas.length; i++) {
+            encriptada += letrasalmacenadas[i+2];
+            if(i+2 > letrasalmacenadas.length) {
+
+            }
+        }
+
+    return "";
+    }
 
     public static void main(String[] args) {
 
-        System.out.println(pasatiempos());
+        System.out.println(encriptar());
     }
 
 }
