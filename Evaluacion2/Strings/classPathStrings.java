@@ -592,6 +592,10 @@ class classPathStrings {
         return fraseusuario;
     }
 
+    public static boolean Alfabetica(String str1, char a, char b) {
+        
+    }
+
     public static void main(String[] args) {
 
         String[] opcionales = new String[10];
