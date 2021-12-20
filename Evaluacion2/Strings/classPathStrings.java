@@ -588,6 +588,18 @@ class classPathStrings {
         String fraseusuario = kdb.nextLine();
 
         return fraseusuario;
+        
+    }
+
+    public static int leerInt() {
+        Scanner kdb2 = new Scanner(System.in);
+
+        System.out.println("Introduce un numero");
+        int numusuario = kdb2.nextInt();
+
+        kdb2.close();
+        return numusuario;
+        
     }
 
     public static boolean Alfabetica() {
@@ -683,39 +695,28 @@ class classPathStrings {
 
         char [] letrasalmacenadas = new char[str1.length()];
 
-        boolean esnumero = false;
-
-        String k = "";
-
-        while(esnumero == false) {
-
-        System.out.println("Introduce un número y moveremos los carácteres tantos numeros a la derecha como introduzcas");
-        k = leerCadena();
-        
-        for (int i = 1; i < k.length(); i++) {
-            if(k.charAt(i) > 0 || k.charAt(i) < 9) {
-                esnumero = true;
-            }
-            else {
-                
-            }
-        }
-    }
-        
-        Integer.parseInt(k);
+        int k = leerInt();
 
         for (int i = 0; i < str1.length(); i++) {
             letrasalmacenadas[i] = str1.charAt(i);
         }
         String encriptada = "";
+        String encriptadas = "";
+        int controlposicion = 0;
         for (int i = 0; i < letrasalmacenadas.length; i++) {
-            encriptada += letrasalmacenadas[i+2];
-            if(i+2 > letrasalmacenadas.length) {
-
+            if(i+k > letrasalmacenadas.length-1) {
+                encriptadas +=  letrasalmacenadas[controlposicion];
+                controlposicion++;               
             }
+            else{
+                encriptada += letrasalmacenadas[i+k];
+            }
+           
         }
+        encriptada += encriptadas;
+        
 
-    return "";
+    return encriptada;
     }
 
     public static void main(String[] args) {
