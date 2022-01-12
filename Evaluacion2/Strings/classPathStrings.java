@@ -587,8 +587,11 @@ class classPathStrings {
         System.out.println("Introduce una frase");
         String fraseusuario = kdb.nextLine();
 
+        kdb.close();
+
         return fraseusuario;
         
+       
     }
 
     public static int leerInt() {
@@ -718,7 +721,7 @@ class classPathStrings {
 
     return encriptada;
     }
-    
+
 
     public static void main(String[] args) {
 
