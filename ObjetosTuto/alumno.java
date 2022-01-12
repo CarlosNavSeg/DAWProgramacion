@@ -6,19 +6,19 @@ class alumno {
 
     public alumno (int id_alu, String grupo) {
         nombre = "Pepito Antonio";
-        informealumno();
+        contadoralumnos++;
 
     }
 
     public alumno (String nombre, String grupo) {
         id_alu = 172211888;
-        informealumno();
+        contadoralumnos++;
         
     }
 
     public alumno (String nombre, int id_alu) {
         grupo = "1Bach";
-        informealumno();
+        contadoralumnos++;
         
     }
 
@@ -26,12 +26,11 @@ class alumno {
         this.nombre = nombre;
         this.id_alu = id_alu;
         this.grupo = grupo;
-        informealumno();
+        contadoralumnos++;
     }
 
 
     static int informealumno() {
-        contadoralumnos++;
         return contadoralumnos;
     }
 
