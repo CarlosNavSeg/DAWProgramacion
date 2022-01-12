@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch testAlumno",
+            "request": "launch",
+            "mainClass": "testAlumno",
+            "projectName": "DAWProgramacion_669eb717"
+        },
+        {
+            "type": "java",
             "name": "Launch classPathStrings",
             "request": "launch",
             "mainClass": "Strings.classPathStrings",

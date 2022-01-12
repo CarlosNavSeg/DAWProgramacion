@@ -1,0 +1,13 @@
+Una clase alumno:
+    Métodos:
+    Contador de alumnos creados.
+    Imprimir informe: muestra el total de alumnos.
+    Imprimir informe alumnos: se le pasa como parámetro un array de alumnos e imprime el nombre e id de cada alumno.
+    Atributos:
+    id_alumno(nia)
+    nombre
+    grupo "1CFSJ"
+    No se pueden crear alumnos sin ninguna información.
+        Métodos:
+        Preguntar duda: imprime "el nombre del alumno" levanta la mano.
+        
