@@ -10,4 +10,19 @@ Una clase alumno:
     No se pueden crear alumnos sin ninguna información.
         Métodos:
         Preguntar duda: imprime "el nombre del alumno" levanta la mano.
+
+Una clase silla:
+    Atributos:
+    Color.
+    Número de patas.
+    Respaldo o no.
+    Nivel de comodidad.(0-10)
+    Material.
+    Tiene una localización(coordenadas).
+    Los atributos deben ser privados pero desde la clase de prueba deben poder modificarse y acceder a su valor.
+    Métodos de clase:
+
+    Métodos de objetos:
+    En la clase de prueba deben crearse 100 sillas.
+
         
