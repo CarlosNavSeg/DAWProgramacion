@@ -19,7 +19,6 @@ class alumno {
     public alumno (String nombre, int id_alu) {
         grupo = "1Bach";
         contadoralumnos++;
-        
     }
 
     public alumno(String nombre, int id_alu, String grupo) {

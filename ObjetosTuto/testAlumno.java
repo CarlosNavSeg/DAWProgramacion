@@ -7,6 +7,6 @@ public class testAlumno {
         //arrayPrueba[0] = a1;
         //alumno.informealumnos(arrayPrueba);
         //a1.preguntarDuda();
-        System.out.println(alumno.informealumno());
+        //System.out.println(alumno.informealumno());
     }
 }

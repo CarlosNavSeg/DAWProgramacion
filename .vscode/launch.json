@@ -10,6 +10,13 @@
             "name": "Launch testAlumno",
             "request": "launch",
             "mainClass": "testAlumno",
+            "projectName": "DAWProgramacion_fbbb188c"
+        },
+        {
+            "type": "java",
+            "name": "Launch testAlumno",
+            "request": "launch",
+            "mainClass": "testAlumno",
             "projectName": "DAWProgramacion_669eb717"
         },
         {
