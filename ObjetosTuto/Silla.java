@@ -50,7 +50,8 @@ public class Silla {
     public Point getLocalizacion() {
         return localizacion;
     }
-    public void setLocalizacion(Point localizacion) {
+    public void setLocalizacion(int coord1, int coord2) {
+        Point localizacion = new Point(coord1, coord2);
         this.localizacion = localizacion;
     }
     
