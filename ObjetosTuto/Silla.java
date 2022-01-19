@@ -1,4 +1,5 @@
 import java.awt.Point;
+import java.util.Random;
 
 public class Silla {
     private int numeropatas;
@@ -8,6 +9,8 @@ public class Silla {
     private Point localizacion;
     private String color;
 
+    Random rnd = new Random();
+
     public Silla(int numeropatas, boolean tieneRespaldo, int nivelComodidad, String material, Point localizacion, String color) {
         this.numeropatas = numeropatas;
         this.tieneRespaldo = tieneRespaldo;
@@ -15,6 +18,15 @@ public class Silla {
         this.material = material;
         this.localizacion = localizacion;
         this.color = color;
+    }
+
+    public Silla() {
+        numeropatas = rnd.nextInt(4);
+        tieneRespaldo = rnd.nextBoolean();
+        nivelComodidad = rnd.nextInt(10);
+        material = Integer.toString(rnd.nextInt(20));
+        localizacion = new Point(rnd.nextInt(10) , rnd.nextInt(10));
+        color = Integer.toString(rnd.nextInt(22));
     }
 
     public String getColor() {

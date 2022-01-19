@@ -7,6 +7,7 @@ public class sillaTest {
         Random rnd = new Random();
         ArrayList<Silla> sillasRandom = new ArrayList<Silla>(100);
 
+        /*
         for (int i = 0; i < 100; i++) {
             int numeropatas = rnd.nextInt(4);
             boolean tieneRespaldo = rnd.nextBoolean();
@@ -17,6 +18,10 @@ public class sillaTest {
             Silla sillaType = new Silla(numeropatas, tieneRespaldo, nivelComodidad, material, localizacion, color);
             sillasRandom.add(i, sillaType);
 
+        }
+        */
+        for (int i = 0; i < 100; i++) {
+            sillasRandom.add(i, new Silla());
         }
         
         for (int i = 0; i < 10; i++) {
