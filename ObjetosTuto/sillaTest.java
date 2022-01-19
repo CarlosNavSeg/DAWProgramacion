@@ -1,10 +1,10 @@
 import java.util.ArrayList;
-import java.util.Random;
-import java.awt.Point;
+//import java.util.Random;
+//import java.awt.Point;
 
 public class sillaTest {
     public static void main(String[] args) {
-        Random rnd = new Random();
+        //Random rnd = new Random();
         ArrayList<Silla> sillasRandom = new ArrayList<Silla>(100);
 
         /*
