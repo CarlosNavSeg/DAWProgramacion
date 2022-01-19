@@ -1,6 +1,6 @@
 import java.awt.Point;
 
-public class silla {
+public class Silla {
     private int numeropatas;
     private boolean tieneRespaldo;
     private int nivelComodidad;
@@ -8,8 +8,13 @@ public class silla {
     private Point localizacion;
     private String color;
 
-    public silla(int numeropatas, boolean tieneRespaldo, int nivelComodidad, String matieral, Point localizacion, String color) {
-
+    public Silla(int numeropatas, boolean tieneRespaldo, int nivelComodidad, String material, Point localizacion, String color) {
+        this.numeropatas = numeropatas;
+        this.tieneRespaldo = tieneRespaldo;
+        this.nivelComodidad = nivelComodidad;
+        this.material = material;
+        this.localizacion = localizacion;
+        this.color = color;
     }
 
     public String getColor() {

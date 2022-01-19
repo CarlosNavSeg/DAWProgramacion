@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch sillaTest",
+            "request": "launch",
+            "mainClass": "sillaTest",
+            "projectName": "DAWProgramacion_ceb2ee60"
+        },
+        {
+            "type": "java",
             "name": "Launch testAlumno",
             "request": "launch",
             "mainClass": "testAlumno",
