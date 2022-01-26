@@ -121,10 +121,10 @@ public class TicketMachine2 {
             return amountToRefund;
         }
 
-        public void emptyMachine() {
-            System.out.println("La máquina tiene " + total + "centimos.");
+        public double emptyMachine() {
+            double temp = total;
             total = 0;
-
+            return temp;
         }
     }
 }
