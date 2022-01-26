@@ -1,7 +1,5 @@
 package Book;
 
-import java.util.Scanner;
-
 /**
  * A class that maintains information on a book.
  * This might form part of a larger application such
