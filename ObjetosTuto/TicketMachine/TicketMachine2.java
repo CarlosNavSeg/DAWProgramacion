@@ -35,6 +35,7 @@ public class TicketMachine2 {
          * @Return The price of a ticket.
          */
         public double getPrice() {
+
             return price;
         }
 
@@ -44,6 +45,12 @@ public class TicketMachine2 {
          */
         public double getBalance() {
             return balance;
+        }
+
+        private boolean setDescuento() {
+            amountToPay = price * 0.8 - balance;
+            price = price * 0.8;
+            return true;
         }
 
         /**
@@ -65,23 +72,41 @@ public class TicketMachine2 {
          * an error message if more money is required.
          */
         public void printTicket() {
-            if (balance >= price) {
-                // Simulate the printing of a ticket.
-                System.out.println("##################");
-                System.out.println("# The BlueJ Line");
-                System.out.println("# Ticket");
-                System.out.println("# " + price + " cents.");
-                System.out.println("##################");
-                System.out.println();
+            if (setDescuento()) {
+                if (balance >= price) {
+                    // Simulate the printing of a ticket.
+                    System.out.println("##################");
+                    System.out.println("# The BlueJ Line");
+                    System.out.println("# Ticket");
+                    System.out.println("# " + price + " cents.");
+                    System.out.println("Discounted 20% of total price.");
+                    System.out.println("##################");
+                    System.out.println();
 
-                // Update the total collected with the price.
-                total = total + price;
-                // Reduce the balance by the price.
-                balance = balance - price;
+                    // Update the total collected with the price.
+                    total = total + price;
+                    // Reduce the balance by the price.
+                    balance = balance - price;
+                } else {
+                    System.out.println("You must insert at least: " +
+                            (amountToPay) + " more cents.");
+                }
             } else {
-                System.out.println("You must insert at least: " +
-                        (amountToPay) + " more cents.");
+                if (balance >= price) {
+                    System.out.println("##################");
+                    System.out.println("# The BlueJ Line");
+                    System.out.println("# Ticket");
+                    System.out.println("# " + price + " cents.");
+                    System.out.println("##################");
+                    System.out.println();
 
+                    total = total + price;
+                    balance = balance-price;
+                    
+                } else {
+                    System.out.println("You must insert at least: " +
+                            (amountToPay) + " more cents.");
+                }
             }
         }
 
