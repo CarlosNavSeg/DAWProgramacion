@@ -725,7 +725,7 @@ class classPathStrings {
 
     public static void main(String[] args) {
 
-        System.out.println(encriptar());
+        System.out.println(pasatiempos());
     }
 
 }

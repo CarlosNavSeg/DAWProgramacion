@@ -7,6 +7,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ClockDisplayTest",
+            "request": "launch",
+            "mainClass": "Reloj.ClockDisplayTest",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
+            "name": "Launch classPathStrings",
+            "request": "launch",
+            "mainClass": "Strings.classPathStrings",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch HeaterTest",
             "request": "launch",
             "mainClass": "Heater.HeaterTest",
