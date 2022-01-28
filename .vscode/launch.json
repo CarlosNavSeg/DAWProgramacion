@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HeaterTest",
+            "request": "launch",
+            "mainClass": "Heater.HeaterTest",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch BookTest",
             "request": "launch",
             "mainClass": "Book.BookTest",
