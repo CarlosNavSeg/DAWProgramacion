@@ -2,7 +2,7 @@ package Heater;
 
 public class Heater {
     // Atributos
-    private double temperatura;
+    private double temperature;
     private double max;
     private double min;
     private double increment;
@@ -11,14 +11,14 @@ public class Heater {
         this.max = max;
         this.min = min;
         this.increment = 5.0;
-        this.temperatura = 15.0;
+        this.temperature = 15.0;
     }
 
     // Métodos de objeto
     public void warmer() {
 
-        if (this.temperatura + increment <= max) {
-            this.temperatura += increment;
+        if (this.temperature + increment <= max) {
+            this.temperature += increment;
         } else {
             System.out.println("La temperatura máxima no puede ser superada.");
         }
@@ -26,8 +26,8 @@ public class Heater {
 
     public void cooler() {
 
-        if (this.temperatura-increment >= min) {
-            this.temperatura -= increment;
+        if (this.temperature-increment >= min) {
+            this.temperature -= increment;
         }
 
         else {
@@ -35,9 +35,10 @@ public class Heater {
         }
     }
 
-    public double getTemperatura() {
-        return this.temperatura;
+    public double getTemperature() {
+        return this.temperature;
     }
+
     public void setIncrement(double increment) {
         if(increment > 5.0) {
             System.out.println("El incremento solo puede estar entre 1.0 y 5.0");

@@ -6,9 +6,9 @@ public class HeaterTest {
     
     /*Post-primer apartadp
     heater h1 = new Heater();
-    System.out.println(getTemperatura());
+    System.out.println(h1.getTemperatura());
     h1.warmer();
-    System.out.println(getTemperatura());
+    System.out.println(h1.getTemperatura());
     Probado
     */
     /*
@@ -37,20 +37,20 @@ public class HeaterTest {
     */
 
     Heater h3 = new Heater(40.0, 15.0);
-    System.out.println(h3.getTemperatura());
+    System.out.println(h3.getTemperature());
     h3.cooler();
     h3.warmer();
     h3.warmer();
     h3.warmer();
     h3.warmer();
     h3.warmer();
-    System.out.println(h3.getTemperatura());
+    System.out.println(h3.getTemperature());
     h3.warmer();
     h3.cooler();
-    System.out.println(h3.getTemperatura());
+    System.out.println(h3.getTemperature());
     h3.setIncrement(0.0);
     h3.setIncrement(4.0);
     h3.warmer();
-    System.out.println(h3.getTemperatura());
+    System.out.println(h3.getTemperature());
     }
 }
