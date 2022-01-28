@@ -16,7 +16,7 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed = 0;
-    private boolean courseText;
+    private final boolean courseText;
 
     public int getBorrowed() {
         return borrowed;
@@ -30,9 +30,14 @@ class Book
         return title;
     }
 
-    public void isCourseText(boolean courseText) {
-        this.courseText = courseText;
+    public boolean isCourseText() {
+        return this.courseText;
     }
+
+    public String getRefNumber() {
+        return refNumber;
+    }
+
 
    
 
@@ -49,6 +54,10 @@ class Book
         refNumber = "";
     }
 
+    public int getPages() {
+        return pages;
+    }
+  
     // Add the methods here ...
     public void printAuthor() {
         System.out.println("El autor es: " + author);
@@ -57,7 +66,6 @@ class Book
         System.out.println("El titulo es: " + title);
     }
     public void setRefNumber(String ref) {
-        System.out.println("Introduzca el numero de referencia.");
 
         if(ref.length() <= 3) {
             System.out.println("Error, el número de referencia es incorrecto.");
