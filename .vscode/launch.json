@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MailItemTest",
+            "request": "launch",
+            "mainClass": "MailItem.MailItemTest",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch ClockDisplayTest",
             "request": "launch",
             "mainClass": "Reloj.ClockDisplayTest",
