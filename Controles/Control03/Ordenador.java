@@ -11,8 +11,12 @@ public class Ordenador {
     }
 
     public void setFormato(String formato) {
-        
-        this.formato = formato;
+        if(formato == "Sobremesa" || formato == "Portail") {
+            this.formato = formato;
+        }
+        else {
+            
+        }
         
     }
     public String getColor() {
@@ -39,12 +43,17 @@ public class Ordenador {
 
     }
 
-    public Ordenador(String formato, String  color, Teclado teclado) {
+    public Ordenador(String formato,String color, Teclado teclado) {
 
-        this.formato = formato;
+        if(formato == "Sobremesa" || formato == "Portatil") {
+            this.formato = formato;
+        }
+        else {
+
+        }
         this.color = color;
         this.teclado = teclado;
-        
+
     }
 
     public void Conectar(Ordenador o1) {
