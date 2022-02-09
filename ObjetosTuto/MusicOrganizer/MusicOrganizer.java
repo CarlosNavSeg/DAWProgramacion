@@ -77,8 +77,11 @@ public class MusicOrganizer
      */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(isValidIndex(index) == true) {
             files.remove(index);
+        }
+        else{
+            
         }
     }
 }
