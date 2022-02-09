@@ -149,7 +149,6 @@ public class MusicOrganizer
             String cadena = it.next();
             if(cadena.contains(match)) {
                 matching.add(cadena);
-                it.remove();
             }
             else {
 
@@ -166,7 +165,7 @@ public class MusicOrganizer
             if(files.get(recorrerFiles).contains(searchString)) {
                 return recorrerFiles;
             }
-            
+
             recorrerFiles++;
             
         }
