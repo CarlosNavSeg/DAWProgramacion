@@ -57,7 +57,7 @@ public class MusicOrganizer
     public void checkIndex(int index) {
         if(index > files.size() || index < 0) {
             System.out.println("Índice invalido, la lista de índices validos es 0, " +
-            files.size());
+            (files.size() -1)); 
         }
 
     }
