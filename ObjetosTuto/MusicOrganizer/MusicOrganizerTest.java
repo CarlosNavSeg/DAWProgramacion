@@ -5,11 +5,13 @@ public class MusicOrganizerTest {
     public static void main(String[] args) {
         ArrayList<String> canciones = new ArrayList<>(3);
         MusicOrganizer musica = new MusicOrganizer();
-        musica.getArrayList(canciones);
-        musica.addFile("La rosa de los vientos");
-        musica.addFile("Ocarina of Time");
-        musica.addFile("Holi");
-        musica.addFile("casi");
-        musica.addFile("Invalido");
+        musica.addFile("match");
+        musica.addFile("filename");
+        musica.addFile("La Rosa de los Vientos");
+
+        musica.getMatching("match");
+        musica.playMatching("match");
+        musica.listAllFiles();
+        musica.listMatching("match");
     }
 }

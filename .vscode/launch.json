@@ -10,6 +10,13 @@
             "name": "Launch MusicOrganizerTest",
             "request": "launch",
             "mainClass": "MusicOrganizer.MusicOrganizerTest",
+            "projectName": "DAWProgramacion_ceb2ee60"
+        },
+        {
+            "type": "java",
+            "name": "Launch MusicOrganizerTest",
+            "request": "launch",
+            "mainClass": "MusicOrganizer.MusicOrganizerTest",
             "projectName": "DAWProgramacion_d3a31efd"
         },
         {

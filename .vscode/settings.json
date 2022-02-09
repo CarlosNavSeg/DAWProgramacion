@@ -6,5 +6,9 @@
         "Evaluacion2",
         "Controles",
         "ObjetosTuto"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "ObjetosTuto/lib/jl1.0.1.jar"
     ]
 }
