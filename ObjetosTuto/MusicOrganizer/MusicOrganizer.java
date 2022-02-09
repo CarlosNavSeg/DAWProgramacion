@@ -94,7 +94,7 @@ public class MusicOrganizer
 
     /*public void listMatching(String match) {
         for (String cancion : files) {
-            if(cancion.equals(match)) {
+            if(cancion.contains(match)) {
                 System.out.println(match);
             }
         }
@@ -106,7 +106,7 @@ public class MusicOrganizer
 
     public void playMatching(String match) {
         for (String cancion : files) {
-            if(cancion.equals(match)) {
+            if(cancion.contains(match)) {
                 MusicPlayer reproductor = new MusicPlayer();
                 reproductor.playSample(match);
             }
@@ -162,12 +162,15 @@ public class MusicOrganizer
         int recorrerFiles = 0;
 
         while(files.size() < recorrerFiles) {
+
             if(files.get(recorrerFiles).contains(searchString)) {
                 return recorrerFiles;
             }
+            
             recorrerFiles++;
             
         }
+
         return -1;
     
     }
