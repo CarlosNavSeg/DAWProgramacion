@@ -3,9 +3,10 @@
     "java.project.sourcePaths": [
         "Tema2",
         "Tema 1",
+        "ObjetosTuto",
         "Evaluacion2",
         "Controles",
-        "ObjetosTuto"
+        ""
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

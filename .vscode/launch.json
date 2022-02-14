@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch recorridoArray",
+            "request": "launch",
+            "mainClass": "recorridoArray",
+            "projectName": "DAWProgramacion_ceb2ee60"
+        },
+        {
+            "type": "java",
             "name": "Launch MusicOrganizerTest",
             "request": "launch",
             "mainClass": "MusicOrganizer.MusicOrganizerTest",

@@ -25,4 +25,7 @@ Una clase silla:
     Métodos de objetos:
     En la clase de prueba deben crearse 100 sillas.
 
+Crea un programa en el que crees un array de 1000 enteros, en las posiciones pares han de aparecer los múltiplos de 3 y
+en las impares los múltiplos de 7, después de rellenarlo tenéis que imprimir las posiciones múltiplo de 13.
+
         
