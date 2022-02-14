@@ -2,10 +2,14 @@ package MusicOrganizerV5;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
+
+import javax.swing.text.PlainDocument;
+
 import java.io.IOException;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.AudioDevice;
 import javazoom.jl.player.FactoryRegistry;
+import javazoom.jl.player.Player;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 /**
@@ -54,9 +58,11 @@ public class MusicPlayer
      */
     public void startPlaying(final String filename)
     {
+
         try {
             setupPlayer(filename);
             Thread playerThread = new Thread() {
+                
                 public void run()
                 {
                     try {
@@ -71,6 +77,7 @@ public class MusicPlayer
                 }
             };
             playerThread.start();
+            
         }
         catch (Exception ex) {
             reportProblem(filename);

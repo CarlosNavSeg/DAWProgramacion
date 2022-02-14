@@ -14,6 +14,10 @@ public class Track
     private String title;
     // Where the track is stored.
     private String filename;
+    //A count for specific Track reproductions
+    private static int playCount = 0;
+    //A String that references the track's Album
+    private String album;
     
     /**
      * Constructor for objects of class Track.
@@ -21,11 +25,16 @@ public class Track
      * @param title The track's title.
      * @param filename The track file. 
      */
-    public Track(String artist, String title, String filename)
+    public Track(String artist, String title, String filename, String album)
     {
-        setDetails(artist, title, filename);
+        setDetails(artist, title, filename, album);
     }
     
+    @Override
+    public String toString() {
+        return "Track [album=" + album + ", artist=" + artist + ", filename=" + filename + ", title=" + title + "]";
+    }
+
     /**
      * Constructor for objects of class Track.
      * It is assumed that the file name cannot be
@@ -34,7 +43,7 @@ public class Track
      */
     public Track(String filename)
     {
-        setDetails("unknown", "unknown", filename);
+        setDetails("unknown", "unknown", filename , "uknown");
     }
     
     /**
@@ -64,14 +73,6 @@ public class Track
         return filename;
     }
         
-    /**
-     * Return details of the track: artist, title and file name.
-     * @return The track's details.
-     */
-    public String getDetails()
-    {
-        return artist + ": " + title + "  (file: " + filename + ")";
-    }
     
     /**
      * Set details of the track.
@@ -79,11 +80,18 @@ public class Track
      * @param title The track's title.
      * @param filename The track file. 
      */
-    private void setDetails(String artist, String title, String filename)
+    private void setDetails(String artist, String title, String filename, String album)
     {
         this.artist = artist;
         this.title = title;
         this.filename = filename;
+        this.album = album;
+    }
+    public void resetCount() {
+        playCount = 0;
+    }
+    public void incCount() {
+        playCount++;
     }
     
 }

@@ -1,5 +1,6 @@
 package MusicOrganizerV5;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * A class to hold details of audio tracks.
@@ -57,6 +58,7 @@ public class MusicOrganizer
         if(indexValid(index)) {
             Track track = tracks.get(index);
             player.startPlaying(track.getFilename());
+            track.incCount();
             System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
         }
     }
@@ -78,7 +80,7 @@ public class MusicOrganizer
     {
         System.out.print("Track " + index + ": ");
         Track track = tracks.get(index);
-        System.out.println(track.getDetails());
+        System.out.println(track.toString());
     }
     
     /**
@@ -89,7 +91,7 @@ public class MusicOrganizer
         System.out.println("Track listing: ");
 
         for(Track track : tracks) {
-            System.out.println(track.getDetails());
+            System.out.println(track.toString());
         }
         System.out.println();
     }
@@ -102,7 +104,7 @@ public class MusicOrganizer
     {
         for(Track track : tracks) {
             if(track.getArtist().contains(artist)) {
-                System.out.println(track.getDetails());
+                System.out.println(track.toString());
             }
         }
     }
@@ -170,5 +172,17 @@ public class MusicOrganizer
         for(Track track : tempTracks) {
             addTrack(track);
         }
+    }
+
+    public void findInTitle(String searchString) {
+        Iterator <Track> it = tracks.iterator();
+        while(it.hasNext()) {
+            Track cancionActual = it.next();
+            String nombre = cancionActual.getFilename();
+            if(nombre.contains(searchString)) {
+                System.out.println(nombre);
+            }
+        }
+
     }
 }
