@@ -1,4 +1,4 @@
-package MusicOrganizerV5;
+package ObjetosTuto.MusicOrganizerV5;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -23,7 +23,7 @@ public class MusicOrganizer
      */
     public MusicOrganizer()
     {
-        tracks = new ArrayList<>();
+        tracks = new ArrayList<Track>();
         player = new MusicPlayer();
         reader = new TrackReader();
         readLibrary("../audio");
