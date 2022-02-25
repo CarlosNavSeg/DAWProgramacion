@@ -1,13 +1,20 @@
 package ObjetosTuto.BaseDeDatos;
-public class Media extends Usuario {
+public class Media{
     private int id;
     private String nombre;
     private String contenido;
     private String tipo;
     protected int usuario_id;
 
+    public String getNombre() {
+        return nombre;
+    }
 
-    public Media (int id, String nombre, String contenido) {
+    public String getTipo() {
+        return tipo;
+    }
+
+    public Media (int id, String nombre, String contenido, String tipo) {
         this.id = id++;
         this.nombre = nombre;
         this.contenido = contenido;

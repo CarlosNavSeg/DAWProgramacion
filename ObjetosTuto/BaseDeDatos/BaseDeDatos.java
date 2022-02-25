@@ -59,7 +59,25 @@ public class BaseDeDatos {
         } while (!emailCorrecto);
 
     }
+    public void userRemove(String email) {
+        for (Usuario usuario:
+             usuarios) {
+            if(usuario.getEmail().equals(email)) {
+                usuarios.remove(usuario);
+            }
+        }
+    }
+    public void userRemoveEmailPattern(String dominio)  {
+        for (Usuario usuario:
+             usuarios) {
+            if(usuario.getEmail().substring(usuario.getEmail().indexOf("@")).equals(dominio)) {
+                usuarios.remove(usuario);
+            }
+            }
+        }
+    }
 
-}
+
+
 
 

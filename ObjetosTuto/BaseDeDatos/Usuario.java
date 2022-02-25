@@ -2,7 +2,7 @@ package ObjetosTuto.BaseDeDatos;
 
 import java.util.ArrayList;
 
-public class Usuario extends BaseDeDatos {
+public class Usuario {
     protected int id = 0;
     protected String email;
     protected String password;
@@ -25,9 +25,25 @@ public class Usuario extends BaseDeDatos {
         return password;
     }
 
-    public void addMedia(String nombre, String contenido) {
-        Media m1 = new Media(id, nombre, contenido);
+    public void addMedia(String nombre, String contenido, String tipo) {
+        Media m1 = new Media(id, nombre, contenido, tipo);
         m1.usuario_id = this.id;
         medias.add(m1);
+    }
+    public void removeMedia(String nombre) {
+        for (Media media:
+             medias) {
+            if (media.getNombre().equals(nombre)) {
+                medias.remove(media);
+            }
+        }
+    }
+    public void removeMediaType(String tipo) {
+        for (Media media:
+                medias) {
+            if(media.getTipo().equals(tipo)) {
+                medias.remove(media);
+            }
+        }
     }
 }
