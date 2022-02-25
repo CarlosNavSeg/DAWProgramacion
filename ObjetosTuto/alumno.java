@@ -1,3 +1,5 @@
+package ObjetosTuto;
+
 class alumno {
     private String nombre;
     private int id_alu;

@@ -1,4 +1,4 @@
-package Book;
+package ObjetosTuto.Book;
 
 /**
  * A class that maintains information on a book.

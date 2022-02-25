@@ -1,3 +1,5 @@
+package ObjetosTuto;
+
 class Crear {
     public static void main(String[] args) { // metodo main
      Pajaro p;

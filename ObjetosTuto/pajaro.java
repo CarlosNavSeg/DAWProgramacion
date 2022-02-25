@@ -1,3 +1,5 @@
+package ObjetosTuto;
+
 class Pajaro {
 
     // *** atributos o propiedades o campos ***

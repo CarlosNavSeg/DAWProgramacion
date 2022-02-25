@@ -1,12 +1,15 @@
 package ObjetosTuto.BaseDeDatos;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BaseDeDatos {
 
+    public static ArrayList<Usuario> usuarios = new ArrayList<>();
+
     public Usuario login(String email, String password) {
 
-        for (Usuario u2 : Usuario.usuarios) {
+        for (Usuario u2 : usuarios) {
             String userEmail = u2.getEmail();
             String userPassword = u2.getPassword();
             if (email.equals(userEmail) && password.equals(userPassword)) {
@@ -30,7 +33,7 @@ public class BaseDeDatos {
                 String comprobador = email.substring(email.indexOf("@"));
                 if (comprobador.contains(".")) {
                     boolean emailDuplicado = false;
-                    for (Usuario u1: Usuario.usuarios
+                    for (Usuario u1: usuarios
                          ) {
                         if(!u1.getEmail().equals(email)) {
                         }
@@ -43,7 +46,7 @@ public class BaseDeDatos {
                         System.out.println("Contraseña: ");
                         String password = kdb.nextLine();
                         Usuario u1 = new Usuario(email, password);
-                        Usuario.usuarios.add(u1);
+                        usuarios.add(u1);
                         emailCorrecto = true;
                     }
                     else {
