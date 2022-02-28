@@ -1,5 +1,5 @@
 package ObjetosTuto.BaseDeDatos;
-public class Media{
+public class Media implements parserXML{
     private int id;
     private String nombre;
     private String contenido;
@@ -18,6 +18,12 @@ public class Media{
         this.id = id++;
         this.nombre = nombre;
         this.contenido = contenido;
+    }
+
+    public String generateXML() {
+        return "<" + id + ">" + " </" + id + ">" + "    " + "<" + nombre + ">" + "  " + " /<" + nombre + ">" + "<" + contenido + ">" + " /<" + contenido + ">"
+                + "  " + "<" + tipo + ">" + "  " + " /<" + tipo + ">" + " " + "<" + usuario_id + ">" + "    "
+                + "/<" + usuario_id + ">";
     }
 
     @Override

@@ -2,7 +2,7 @@ package ObjetosTuto.BaseDeDatos;
 
 import java.util.ArrayList;
 
-public class Usuario {
+public class Usuario implements parserXML {
     protected int id = 0;
     protected String email;
     protected String password;
@@ -37,6 +37,11 @@ public class Usuario {
                 medias.remove(media);
             }
         }
+    }
+
+    public String generateXML() {
+        return "<" + id + ">" + " </" + id + ">" + "    " + "<" + email + ">" + "  " + " /<" + email + ">"
+                + "  " + "<" + password + ">" + "  " + " /<" + password + ">";
     }
     public void removeMediaType(String tipo) {
         for (Media media:
