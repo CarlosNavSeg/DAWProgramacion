@@ -1,4 +1,4 @@
-package ObjetosTuto.MailItem;
+package MailItem;
 
 public class MailItemTest {
     public static void main(String[] args) {

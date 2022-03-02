@@ -1,4 +1,4 @@
-package ObjetosTuto.BaseDeDatos;
+package BaseDeDatos;
 
 import java.util.ArrayList;
 
@@ -39,10 +39,12 @@ public class Usuario implements parserXML {
         }
     }
 
+    @Override
     public String generateXML() {
         return "<" + id + ">" + " </" + id + ">" + "    " + "<" + email + ">" + "  " + " /<" + email + ">"
                 + "  " + "<" + password + ">" + "  " + " /<" + password + ">";
     }
+
     public void removeMediaType(String tipo) {
         for (Media media:
                 medias) {

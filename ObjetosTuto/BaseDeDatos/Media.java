@@ -1,4 +1,4 @@
-package ObjetosTuto.BaseDeDatos;
+package BaseDeDatos;
 public class Media implements parserXML{
     private int id;
     private String nombre;
@@ -20,6 +20,7 @@ public class Media implements parserXML{
         this.contenido = contenido;
     }
 
+    @Override
     public String generateXML() {
         return "<" + id + ">" + " </" + id + ">" + "    " + "<" + nombre + ">" + "  " + " /<" + nombre + ">" + "<" + contenido + ">" + " /<" + contenido + ">"
                 + "  " + "<" + tipo + ">" + "  " + " /<" + tipo + ">" + " " + "<" + usuario_id + ">" + "    "
@@ -36,4 +37,6 @@ public class Media implements parserXML{
                 ", usuario_id=" + usuario_id +
                 '}';
     }
+
+
 }

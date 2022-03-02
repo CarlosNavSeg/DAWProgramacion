@@ -1,4 +1,4 @@
-package ObjetosTuto.BaseDeDatos;
+package BaseDeDatos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -57,7 +57,7 @@ public class BaseDeDatos {
                 System.out.println("Email incorrecto");
             }
         } while (!emailCorrecto);
-
+        kdb.close();
     }
     public void userRemove(String email) {
         for (Usuario usuario:
@@ -74,6 +74,7 @@ public class BaseDeDatos {
                 usuarios.remove(usuario);
             }
             }
+            
         }
     }
 

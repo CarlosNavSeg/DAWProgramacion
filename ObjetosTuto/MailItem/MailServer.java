@@ -1,4 +1,4 @@
-package ObjetosTuto.MailItem;
+package MailItem;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;

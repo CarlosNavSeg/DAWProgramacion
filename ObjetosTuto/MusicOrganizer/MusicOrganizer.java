@@ -1,4 +1,4 @@
-package ObjetosTuto.MusicOrganizer;
+package MusicOrganizer;
 import java.util.ArrayList;
 import java.util.Iterator;
 

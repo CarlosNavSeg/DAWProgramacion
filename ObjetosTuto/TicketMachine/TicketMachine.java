@@ -1,4 +1,4 @@
-package ObjetosTuto.TicketMachine;
+package TicketMachine;
 /**
  * TicketMachine models a naive ticket machine that issues
  * flat-fare tickets.

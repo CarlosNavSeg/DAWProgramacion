@@ -1,4 +1,4 @@
-package ObjetosTuto.TicketMachine;
+package TicketMachine;
 
 public class TicketMachine2 {
     /**

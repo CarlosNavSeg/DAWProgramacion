@@ -1,4 +1,4 @@
-package ObjetosTuto;
+
 
 import java.awt.Point;
 import java.util.Random;

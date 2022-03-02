@@ -1,4 +1,4 @@
-package ObjetosTuto.Heater;
+package Heater;
 
 public class Heater {
     // Atributos

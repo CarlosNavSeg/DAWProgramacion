@@ -1,4 +1,4 @@
-package ObjetosTuto.MusicOrganizerV5;
+package MusicOrganizerV5;
 /**
  * Store the details of a music track,
  * such as the artist, title, and file name.

@@ -1,4 +1,4 @@
-package ObjetosTuto.Heater;
+package Heater;
 
 public class HeaterTest {
     public static void main(String[] args) {

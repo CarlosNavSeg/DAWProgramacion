@@ -1,4 +1,4 @@
-package ObjetosTuto.Reloj;
+package Reloj;
 /**
  * The ClockDisplay class implements a digital clock display for a
  * European-style 24 hour clock. The clock shows hours and minutes. The 

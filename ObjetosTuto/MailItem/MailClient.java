@@ -1,4 +1,4 @@
-package ObjetosTuto.MailItem;
+package MailItem;
 
 
 /**

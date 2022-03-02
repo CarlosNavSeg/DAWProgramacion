@@ -1,4 +1,4 @@
-package ObjetosTuto.Book;
+package Book;
 
 public class BookTest {
     public static void main(String[] args) {

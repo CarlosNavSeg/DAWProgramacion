@@ -1,4 +1,4 @@
-package ObjetosTuto.Book;
+package Book;
 
 /**
  * A class that maintains information on a book.
@@ -8,8 +8,7 @@ package ObjetosTuto.Book;
  * @author (Insert your name here.)
  * @version (Insert today's date here.)
  */
-class Book
-{
+class Book {
     // The fields.
     private String author;
     private String title;
@@ -38,15 +37,11 @@ class Book
         return refNumber;
     }
 
-
-   
-
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
-    {
+    public Book(String bookAuthor, String bookTitle, int bookPages) {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
@@ -57,23 +52,25 @@ class Book
     public int getPages() {
         return pages;
     }
-  
+
     // Add the methods here ...
     public void printAuthor() {
         System.out.println("El autor es: " + author);
     }
+
     public void printTitle() {
         System.out.println("El titulo es: " + title);
     }
+
     public void setRefNumber(String ref) {
 
-        if(ref.length() <= 3) {
+        if (ref.length() <= 3) {
             System.out.println("Error, el número de referencia es incorrecto.");
-        }
-        else {
+        } else {
             refNumber = ref;
         }
     }
+
     public void borrow() {
         borrowed++;
     }
@@ -82,8 +79,8 @@ class Book
         System.out.println("Title: " + title);
         System.out.println("Autor: " + author);
         System.out.println("Pages: " + pages);
-        System.out.println("Numero de referencia: "+ refNumber);
+        System.out.println("Numero de referencia: " + refNumber);
         System.out.println("Prestado " + borrowed + " veces.");
-        System.out.println("Es de algun curso "+ courseText);
+        System.out.println("Es de algun curso " + courseText);
     }
 }

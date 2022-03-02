@@ -1,4 +1,4 @@
-package ObjetosTuto;
+
 
 class Pajaro {
 

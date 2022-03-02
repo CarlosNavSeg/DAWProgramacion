@@ -1,4 +1,4 @@
-package ObjetosTuto;
+
 
 class alumno {
     private String nombre;

@@ -1,4 +1,4 @@
-package ObjetosTuto.Reloj;
+package Reloj;
 
 /**
  * The NumberDisplay class represents a digital number display that can hold

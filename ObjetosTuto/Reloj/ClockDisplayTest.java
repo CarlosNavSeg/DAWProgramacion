@@ -1,4 +1,4 @@
-package ObjetosTuto.Reloj;
+package Reloj;
 
 public class ClockDisplayTest {
     public static void main(String[] args) {

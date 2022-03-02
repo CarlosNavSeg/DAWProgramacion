@@ -1,4 +1,4 @@
-package ObjetosTuto.MusicOrganizer;
+package MusicOrganizer;
 
 public class MusicOrganizerTest {
     public static void main(String[] args) {
