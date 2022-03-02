@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch filasOColumnasNulasArray",
+            "request": "launch",
+            "mainClass": "Arrays.filasOColumnasNulasArray",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch recorridoArray",
             "request": "launch",
             "mainClass": "recorridoArray",

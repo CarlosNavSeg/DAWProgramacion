@@ -76,6 +76,11 @@ public class MusicPlayer
                     }
                 }
             };
+
+            if(Thread.currentThread().isAlive()) {
+                playerThread.interrupt();                
+            }
+
             playerThread.start();
             
         }
