@@ -1,5 +1,5 @@
 package BaseDeDatos;
 
 public interface parserXML {
-String generateXML();
+    String generateXML();
 }
