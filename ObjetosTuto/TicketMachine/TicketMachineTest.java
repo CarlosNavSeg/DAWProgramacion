@@ -1,4 +1,4 @@
-package TicketMachine;
+package ObjetosTuto.TicketMachine;
 
 public class TicketMachineTest {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package ObjetosTuto;
+
 public class testAlumno {
     public static void main(String[] args) {
         

@@ -1,4 +1,4 @@
-package MusicOrganizerV5;
+package ObjetosTuto.MusicOrganizerV5;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;

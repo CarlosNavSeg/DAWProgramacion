@@ -1,4 +1,4 @@
-package MusicOrganizerV5;
+package ObjetosTuto.MusicOrganizerV5;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;

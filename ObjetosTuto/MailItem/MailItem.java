@@ -1,4 +1,4 @@
-package MailItem;
+package ObjetosTuto.MailItem;
 /**
  * A class to model a simple mail item. The item has sender and recipient
  * addresses and a message string.
