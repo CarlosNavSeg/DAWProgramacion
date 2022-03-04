@@ -7,6 +7,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ClubDemo",
+            "request": "launch",
+            "mainClass": "Club.ClubDemo",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
+            "name": "Launch macrosBDD",
+            "request": "launch",
+            "mainClass": "macrosBDD",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch filasOColumnasNulasArray",
             "request": "launch",
             "mainClass": "Arrays.filasOColumnasNulasArray",
