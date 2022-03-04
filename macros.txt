@@ -1,1 +1,7 @@
-
+'B10028B', 'CruzamientoBjcSerieOlimpia', '4.38', '2', '1', 'BjcOlimpia'),
+('B10200B', 'CruzamientoBjcOlimpiaConVisor', '0.88', '29', 'BjcOlimpia'),
+('B10200B', 'CartuchoFusibleLegrandT2250A', '5.89', '1', '1', 'Legrand'),
+('L16555', 'CartuchoFusibleLegrandT2315A', '5.89', '3', '3', 'Legrand'),
+('IM2P10L', 'InterruptorMagnetotermico', '2p,', '4', '14.84', '2', '1', 'IntMagn'),
+('B10200B', 'BaseTtLateralNiessenTrazoBla', '4.38', '6', '6', 'Niessen'),
+(

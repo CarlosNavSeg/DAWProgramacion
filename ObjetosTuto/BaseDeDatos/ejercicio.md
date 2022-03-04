@@ -6,4 +6,6 @@ en formato XML.
     <id> </id>
     <email> </email>
     <password> </password>
+
+Buscate la vida para que el método que escribe el generateXML
     

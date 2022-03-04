@@ -1,5 +1,8 @@
 package BaseDeDatos;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Usuario implements parserXML {
@@ -40,9 +43,17 @@ public class Usuario implements parserXML {
     }
 
     @Override
-    public String generateXML() {
-        return "<" + id + ">" + " </" + id + ">" + "    " + "<" + email + ">" + "  " + " /<" + email + ">"
-                + "  " + "<" + password + ">" + "  " + " /<" + password + ">";
+    public String generateXML() throws IOException {
+        File file = new File(email + ".xml");
+        PrintWriter pw = new PrintWriter(file);
+
+        String resultado = "<" + id + ">" + " </" + id + ">\n" + "    " + "<" + email + ">" + "  " + " /<" + email + ">\n"
+        + "  " + "<" + password + ">" + "  " + " /<" + password + ">\n";
+
+        pw.write(resultado);
+        pw.close();
+
+        return resultado;
     }
 
     public void removeMediaType(String tipo) {

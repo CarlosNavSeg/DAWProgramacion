@@ -1,4 +1,9 @@
 package BaseDeDatos;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Media implements parserXML{
     private int id;
     private String nombre;
@@ -21,10 +26,18 @@ public class Media implements parserXML{
     }
 
     @Override
-    public String generateXML() {
-        return "<" + id + ">" + " </" + id + ">" + "    " + "<" + nombre + ">" + "  " + " /<" + nombre + ">" + "<" + contenido + ">" + " /<" + contenido + ">"
-                + "  " + "<" + tipo + ">" + "  " + " /<" + tipo + ">" + " " + "<" + usuario_id + ">" + "    "
-                + "/<" + usuario_id + ">";
+    public String generateXML() throws IOException {
+        File file = new File("parser.xml");
+        PrintWriter pw = new PrintWriter(file);
+
+        String resultado = "<" + id + ">" + " </" + id + ">\n" + "<" + nombre + ">" + "  " + " /<" + nombre + ">\n" + "<" + contenido + ">" + " /<" + contenido + ">\n"
+        + "  " + "<" + tipo + ">" + "  " + " /<" + tipo + ">\n" + "<" + usuario_id + ">" + "    "
+        + "/<" + usuario_id + ">\n";
+
+        pw.write(resultado);
+        pw.close();
+
+        return resultado;
     }
 
     @Override
