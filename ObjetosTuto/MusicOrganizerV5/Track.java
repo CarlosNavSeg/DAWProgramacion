@@ -15,7 +15,7 @@ public class Track
     // Where the track is stored.
     private String filename;
     //A count for specific Track reproductions
-    private static int playCount = 0;
+    //private static int playCount = 0;
     //A String that references the track's Album
     private String album;
     
@@ -88,10 +88,10 @@ public class Track
         this.album = album;
     }
     public void resetCount() {
-        playCount = 0;
+        //playCount = 0;
     }
     public void incCount() {
-        playCount++;
+        //playCount++;
     }
     
 }

@@ -3,13 +3,13 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-import javax.swing.text.PlainDocument;
+//import javax.swing.text.PlainDocument;
 
 import java.io.IOException;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.AudioDevice;
 import javazoom.jl.player.FactoryRegistry;
-import javazoom.jl.player.Player;
+//import javazoom.jl.player.Player;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 /**
