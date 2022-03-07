@@ -19,15 +19,16 @@ public class Media implements parserXML{
         return tipo;
     }
 
-    public Media (int id, String nombre, String contenido, String tipo) {
+    public Media (int id, String nombre, String contenido, String tipo, int usuario_id) {
         this.id = id++;
         this.nombre = nombre;
         this.contenido = contenido;
+        this.usuario_id = usuario_id;
     }
 
     @Override
-    public String generateXML() throws IOException {
-        File file = new File("parser.xml");
+    public String generateXMLInterface() throws IOException {
+        File file = new File("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/Medias/" + id + ".xml");
         PrintWriter pw = new PrintWriter(file);
 
         String resultado = "<" + id + ">" + " </" + id + ">\n" + "<" + nombre + ">" + "  " + " /<" + nombre + ">\n" + "<" + contenido + ">" + " /<" + contenido + ">\n"
@@ -39,6 +40,20 @@ public class Media implements parserXML{
 
         return resultado;
     }
+
+    /*public String generateXML() throws IOException {
+        File file = new File("parser.xml");
+        PrintWriter pw = new PrintWriter(file);
+
+        String resultado = "<" + id + ">" + " </" + id + ">\n" + "<" + nombre + ">" + "  " + " /<" + nombre + ">\n" + "<" + contenido + ">" + " /<" + contenido + ">\n"
+        + "  " + "<" + tipo + ">" + "  " + " /<" + tipo + ">\n" + "<" + usuario_id + ">" + "    "
+        + "/<" + usuario_id + ">\n";
+
+        pw.write(resultado);
+        pw.close();
+
+        return resultado;
+    }*/
 
     @Override
     public String toString() {

@@ -2,30 +2,21 @@
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class macrosBDD {
     public static void main(String[] args) throws IOException {
         File macros = new File("macros.txt");
+        Scanner fileReader = new Scanner(macros);
         PrintWriter myWriter = new PrintWriter(macros);
 
-        String[] fraseCorregir = { "B10028B 	CruzamientoBjcSerieOlimpia 	4.38 	2 	1 	BjcOlimpia",
-                "B10200B 	CruzamientoBjcOlimpiaConVisor 	0.88 	29 		BjcOlimpia",
-                "B10200B CartuchoFusibleLegrandT2250A 	5.89 	1 	1 	Legrand",
-                "L16555 	CartuchoFusibleLegrandT2315A 	5.89 	3 	3 	Legrand",
-                "IM2P10L 	InterruptorMagnetotermico  2p, 4 	14.84 	2 	1 	IntMagn",
-                "B10200B BaseTtLateralNiessenTrazoBla 	4.38 	6 	6 	Niessen" };
-
-        for (int i = 0; i < fraseCorregir.length; i++) {
-            myWriter.write(fraseCorregir[i]);
-        }
 
         String fraseCorrecta = "";
         String comilla = "'";
-        int contadorSeguimiento = 0;
         
 
-        while (contadorSeguimiento < 6) {
-            String lString = fraseCorregir[contadorSeguimiento];
+        while (fileReader.hasNext()) {
+            String lString = fileReader.nextLine();
             String palabra = "";
 
             while (lString.indexOf(" ") != -1) {
@@ -44,12 +35,12 @@ public class macrosBDD {
 
             }
             fraseCorrecta += ")" + ",";
-            contadorSeguimiento++;
             fraseCorrecta += "\n(";
 
         }
         myWriter.write(fraseCorrecta);
         myWriter.close();
+        fileReader.close();
     }
 
 }

@@ -10,6 +10,7 @@ public class Usuario implements parserXML {
     protected String email;
     protected String password;
     public static  ArrayList<Media> medias = new ArrayList<>();
+
     public Usuario(String email, String password) {
         this.id = id++;
         this.email = email;
@@ -28,8 +29,15 @@ public class Usuario implements parserXML {
         return password;
     }
 
+    
+    public int getId() {
+        return id;
+    }
+
+
     public void addMedia(String nombre, String contenido, String tipo) {
-        Media m1 = new Media(id, nombre, contenido, tipo);
+        int usuario_id = this.id;
+        Media m1 = new Media(id, nombre, contenido, tipo, usuario_id);
         m1.usuario_id = this.id;
         medias.add(m1);
     }
@@ -43,8 +51,8 @@ public class Usuario implements parserXML {
     }
 
     @Override
-    public String generateXML() throws IOException {
-        File file = new File(email + ".xml");
+    public String generateXMLInterface() throws IOException {
+        File file = new File("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/Usuarios/" + email + ".xml");
         PrintWriter pw = new PrintWriter(file);
 
         String resultado = "<" + id + ">" + " </" + id + ">\n" + "    " + "<" + email + ">" + "  " + " /<" + email + ">\n"
@@ -55,6 +63,19 @@ public class Usuario implements parserXML {
 
         return resultado;
     }
+
+    /*public String generateXML() throws IOException {
+        File file = new File(email + ".xml");
+        PrintWriter pw = new PrintWriter(file);
+
+        String resultado = "<" + id + ">" + " </" + id + ">\n" + "    " + "<" + email + ">" + "  " + " /<" + email + ">\n"
+        + "  " + "<" + password + ">" + "  " + " /<" + password + ">\n";
+
+        pw.write(resultado);
+        pw.close();
+
+        return resultado;
+    }*/
 
     public void removeMediaType(String tipo) {
         for (Media media:

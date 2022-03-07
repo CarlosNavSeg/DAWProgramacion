@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BaseTest",
+            "request": "launch",
+            "mainClass": "BaseDeDatos.BaseTest",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch ClubDemo",
             "request": "launch",
             "mainClass": "Club.ClubDemo",
