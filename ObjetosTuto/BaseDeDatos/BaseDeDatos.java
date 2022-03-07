@@ -2,24 +2,28 @@ package BaseDeDatos;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BaseDeDatos {
+public class BaseDeDatos  {
 
-    public static Scanner sn = new Scanner("registro.txt");
+    public static Path filePath = Paths.get("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt");
     public static ArrayList<Usuario> usuarios = new ArrayList<>();
 
-    public static Usuario login(String email, String password) {
+    public static Usuario login(String email, String password) throws IOException {
+        Scanner sn = new Scanner(filePath);
         Usuario u1 = null;
         while (sn.hasNext()) {
             String nextLine = sn.nextLine();
             if(nextLine.contains(email) && nextLine.contains(password)) {
+                sn.close();
                 return u1 = new Usuario(email, password);
             }           
         }
+        sn.close();
         return u1;
-        
     }
 
     public static void create() {
@@ -35,6 +39,7 @@ public class BaseDeDatos {
                 String comprobador = email.substring(email.indexOf("@"));
                 if (comprobador.contains(".")) {
                     boolean emailDuplicado = false;
+                    Scanner sn = new Scanner(filePath);
                     while(sn.hasNext()) {
                         String nextLine = sn.nextLine();
                         if(nextLine.contains(email)) {
@@ -44,6 +49,7 @@ public class BaseDeDatos {
                             emailDuplicado = false;
                         }
                     }
+                    sn.close();
                     if(!emailDuplicado) {
                         System.out.println("Contraseña: ");
                         String password = kdb.nextLine();
@@ -61,7 +67,7 @@ public class BaseDeDatos {
                 System.out.println("Email incorrecto");
             }
         } while (!emailCorrecto);
-    
+        
         kdb.close();
     }
     catch (IOException e) {
