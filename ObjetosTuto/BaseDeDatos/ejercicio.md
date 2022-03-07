@@ -9,7 +9,7 @@ en formato XML.
 
 Buscate la vida para que el método que escribe el generateXML lo haga en un nuevo fichero.
 
-Vas a crear una carpeta que se llama usuarios que guarde los XML que genere el método generateXML.
+Vas a crear una carpeta que se llama usuarios que guarde los XML que genere el método generateXML igual con media.
 Una clase nueva que se llame UsuarioInput.java que lance un menú por la consola dos opciones,
 una opción 1 para nuevousuario y 0 para salir.
     
