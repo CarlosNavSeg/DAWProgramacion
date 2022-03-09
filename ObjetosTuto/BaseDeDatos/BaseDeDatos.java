@@ -15,7 +15,7 @@ public class BaseDeDatos {
         String data = "";
         Usuario u1 = null;
         data = new String(
-                Files.readAllBytes(Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
+        Files.readAllBytes(Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
         while(!data.isEmpty()) {
             String nextLine = "";
             if(data.indexOf("\n") != -1) {
@@ -59,7 +59,7 @@ public class BaseDeDatos {
                     String input = "";
                     try {
                         input = new String(Files.readAllBytes(
-                                Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
+                        Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
                         while (!input.isEmpty()) {
                             String nextLine = input.substring(0, input.indexOf("\n"));
                             if (nextLine.contains(email)) {
