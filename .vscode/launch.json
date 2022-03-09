@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ArgumentosMainSuma",
+            "request": "launch",
+            "mainClass": "ArgumentosMainSuma",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch UsuarioInput",
             "request": "launch",
             "mainClass": "BaseDeDatos.UsuarioInput",
