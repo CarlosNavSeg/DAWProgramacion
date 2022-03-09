@@ -1,28 +1,32 @@
 package BaseDeDatos;
 
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BaseDeDatos  {
 
-    public static Path filePath = Paths.get("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt");
     public static ArrayList<Usuario> usuarios = new ArrayList<>();
-
+    
     public static Usuario login(String email, String password) throws IOException {
-        Scanner sn = new Scanner(filePath);
+        String data = "";
         Usuario u1 = null;
-        while (sn.hasNext()) {
-            String nextLine = sn.nextLine();
-            if(nextLine.contains(email) && nextLine.contains(password)) {
-                sn.close();
+        data = new String(Files.readAllBytes(Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
+        while (!data.isEmpty()) {
+            String nextLine = data.substring(0, data.indexOf("\n"));
+            if(nextLine.contains(email)) {
+                if (nextLine.substring(nextLine.indexOf(" "), nextLine.length()).contains(password)) {
                 return u1 = new Usuario(email, password);
-            }           
+                }
+                else {
+
+                }
+            } 
+            data = "";          
         }
-        sn.close();
         return u1;
     }
 
@@ -31,49 +35,63 @@ public class BaseDeDatos  {
         System.out.println("Email: ");
         String email;
         boolean emailCorrecto = false;
-        try {
-        PrintWriter pw = new PrintWriter("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt");
+        boolean emailDuplicado = false;
         do {
             email = kdb.nextLine();
             if (email.contains("@")) {
                 String comprobador = email.substring(email.indexOf("@"));
                 if (comprobador.contains(".")) {
-                    boolean emailDuplicado = false;
-                    Scanner sn = new Scanner(filePath);
-                    while(sn.hasNext()) {
-                        String nextLine = sn.nextLine();
+                    emailDuplicado = false;
+                    String input = "";
+                    try{
+                    input = new String(Files.readAllBytes(Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
+                    while(!input.isEmpty()) {
+                        String nextLine = input.substring(0, input.indexOf("\n"));
                         if(nextLine.contains(email)) {
                             emailDuplicado = true;
+                            input = "";
                         }
                         else {
                             emailDuplicado = false;
+                            input = "";
                         }
                     }
-                    sn.close();
+                    }
+                    catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     if(!emailDuplicado) {
+                        
+                        try {
+                        FileWriter fw = new FileWriter("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt", true);
                         System.out.println("Contraseña: ");
                         String password = kdb.nextLine();
                         Usuario u1 = new Usuario(email, password);
                         usuarios.add(u1);
                         emailCorrecto = true;
-                        pw.write(u1.email + " " + u1.password);
-                        pw.close();
+                        fw.write("\n" + email + " " + password);
+                        fw.close();
+                        }
+                        catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
+                
                     else {
                         System.out.println("El email ya está siendo utilizado");
                     }
                 }
+            
             } else {
                 System.out.println("Email incorrecto");
             }
         } while (!emailCorrecto);
-        
         kdb.close();
-    }
-    catch (IOException e) {
-        System.out.println("Error");
-    }
-    }
+        }
+        
+        
+
+    
     public void userRemove(String email) {
         for (Usuario usuario:
              usuarios) {
