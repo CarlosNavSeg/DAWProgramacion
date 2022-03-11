@@ -2,6 +2,7 @@ package BaseDeDatos;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -102,20 +103,91 @@ public class BaseDeDatos {
         kdb.close();
     }
 
-    public void userRemove(String email) {
-        for (Usuario usuario : usuarios) {
-            if (usuario.getEmail().equals(email)) {
-                usuarios.remove(usuario);
+    public static void userRemoveEmailPattern(String dominio) {
+       String input = "";
+       String nextLine = "";
+       String trimmed = "";
+       try {
+        input = new String(Files.readAllBytes(
+            Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
+        PrintWriter pw = new PrintWriter("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt");
+        String auxString = input;
+        String nextLineDesdeDominio = "";
+        while(!input.isEmpty() ) {
+            if(auxString.indexOf("\n") != -1) {
+                if(nextLine.length() == 0) {
+                    nextLine = auxString.substring(0, auxString.indexOf("\n"));
+                    nextLineDesdeDominio = nextLine.substring(nextLine.indexOf("@"), nextLine.indexOf(" "));
+                }
+                else {
+                auxString = auxString.substring(nextLine.length()+1, auxString.length());
+                if(auxString.indexOf("\n") != -1) {
+                nextLine = auxString.substring(0, auxString.indexOf("\n"));
+                nextLineDesdeDominio = nextLine.substring(nextLine.indexOf("@"),nextLine.indexOf(" "));
+                }
+                else {
+                    nextLine = auxString;
+                    nextLineDesdeDominio = nextLine.substring(nextLine.indexOf("@"),nextLine.indexOf(" "));
+                }
+                }
+            }
+            else {
+                nextLine = auxString;
+                input = "";
+            }
+            if(nextLineDesdeDominio.equals(dominio)) {
+                input = input.replace(nextLine, "");
+                trimmed = input.trim();
             }
         }
-    }
-
-    public void userRemoveEmailPattern(String dominio) {
-        for (Usuario usuario : usuarios) {
-            if (usuario.getEmail().substring(usuario.getEmail().indexOf("@")).equals(dominio)) {
-                usuarios.remove(usuario);
-            }
+        if(trimmed.isEmpty()) {
+            pw.write(input);
         }
+        else {
+        pw.write(trimmed);
+                input = "";
+                pw.close();
+        }
+       }
+       catch(IOException e) {
 
+       }
     }
+
+    public static void userRemove(String email) {
+        String input = "";
+        String nextLine = "";
+        try {
+         input = new String(Files.readAllBytes(
+             Path.of("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt")));
+         PrintWriter pw = new PrintWriter("/home/vagrant/DAWProgramacion/ObjetosTuto/BaseDeDatos/registro.txt");
+         String auxString = input;
+         while(!input.isEmpty() ) {
+             if(auxString.indexOf("\n") != -1) {
+                 if(nextLine.length() == 0) {
+                     nextLine = auxString.substring(0, auxString.indexOf("\n"));
+                 }
+                 else {
+                 auxString = auxString.substring(nextLine.length()+1, input.length());
+                 nextLine = auxString.substring(0, input.indexOf("\n"));
+                 }
+             }
+             else {
+                 nextLine = input;
+                 input = "";
+             }
+             if(nextLine.substring(0, nextLine.indexOf(" ")).equals(email)) {
+                 String newInput = input.replaceFirst(nextLine, "");
+                 String trimmed = newInput.trim();
+                 pw.write(trimmed);
+                 input = "";
+                 pw.close();
+             }
+         }
+        }
+        catch(IOException e) {
+ 
+        }
+     }
+ 
 }
