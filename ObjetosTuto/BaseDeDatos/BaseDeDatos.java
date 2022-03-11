@@ -135,7 +135,7 @@ public class BaseDeDatos {
                 nextLine = auxString;
                 input = "";
             }
-            if(nextLineDesdeDominio.equals(dominio)) {
+            if(nextLineDesdeDominio.equals(dominio) && !input.isEmpty()) {
                 input = input.replace(nextLine, "");
                 trimmed = input.trim();
             }
