@@ -127,7 +127,9 @@ public class BaseDeDatos {
                 }
                 else {
                     nextLine = auxString;
+                    if(!nextLine.isEmpty()) {
                     nextLineDesdeDominio = nextLine.substring(nextLine.indexOf("@"),nextLine.indexOf(" "));
+                    }
                 }
                 }
             }
