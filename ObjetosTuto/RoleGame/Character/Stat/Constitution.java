@@ -1,5 +1,9 @@
 package Stat;
 
-public class Constitution {
+public class Constitution extends CharacterStats {
+
+    public Constitution(int value) {
+        super(value);
+    }
     
 }

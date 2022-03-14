@@ -1,9 +1,11 @@
-import Stat.*;
+import Stat.*; 
+import Race.*;
 public class test {
     public static void main(String[] args) {
-        CharacterStats s = new CharacterStats(2);
-        s.increase();
-        s.decrease();
+    Human human1 = new Human();
+    Dexterity dex = new Dexterity(0);
+    human1.modifier(dex);
+    Orc orco = new Orc();
     }
   
     

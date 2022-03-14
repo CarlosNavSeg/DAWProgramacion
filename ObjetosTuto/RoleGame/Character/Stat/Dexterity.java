@@ -1,5 +1,9 @@
 package Stat;
 
-public class Dexterity {
+public class Dexterity extends CharacterStats {
+
+    public Dexterity(int value) {
+        super(value);
+    }
     
 }

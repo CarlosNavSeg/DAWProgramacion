@@ -1,7 +1,7 @@
 package Stat;
 
 
-public class CharacterStats {
+public abstract class CharacterStats {
     private int value = 0;
 
     public CharacterStats(int value) {
