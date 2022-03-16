@@ -1,5 +1,7 @@
 package RoleGame.Character;
 import RoleGame.Character.Race.*;
+import RoleGame.Item.Food.Apple;
+import RoleGame.Item.Food.Chicken;
 import RoleGame.Character.GameCharacter.Character;
 import RoleGame.Character.Job.Mage;
 public class test {
@@ -10,6 +12,8 @@ public class test {
     Character gCharacter = new Character(name, mage, orco);
     System.out.println(gCharacter.toString());
     gCharacter.receivesDamage(35);
+    RoleGame.Item.Food.Chicken ap = new Chicken();
+    gCharacter.consumes(ap);
     }
   
     

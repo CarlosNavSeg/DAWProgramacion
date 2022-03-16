@@ -2,6 +2,13 @@ package RoleGame.Character.GameCharacter;
 import RoleGame.Character.IDamageable;
 import RoleGame.Character.Job.*;
 import RoleGame.Character.Stat.*;
+import RoleGame.Item.IConsumeable;
+import RoleGame.Item.Food.Apple;
+import RoleGame.Item.Food.Bread;
+import RoleGame.Item.Food.Chicken;
+import RoleGame.Item.Food.Food;
+import RoleGame.Item.Food.GoldenApple;
+import RoleGame.Item.Food.Pork;
 import RoleGame.Character.Race.*;
 public class Character implements IDamageable {
     private String name;
@@ -68,7 +75,26 @@ public class Character implements IDamageable {
     }
     @Override
     public void heals(double amount) {
-        
+        health = health+amount;
+    }
+
+    public void consumes(IConsumeable consumeable) {
+        consumeable.consumedBy(this);
+        if(consumeable.getClass().getName().equals(Apple.class.getName())) {
+            System.out.println(name + " consumed Apple.");
+        }
+        else if(consumeable.getClass().getName().equals(Bread.class.getName())) {
+            System.out.println(name + " consumed Bread.");
+        }
+        else if(consumeable.getClass().getName().equals(Chicken.class.getName())) {
+            System.out.println(name + " consumed Chicken.");
+        }
+        else if(consumeable.getClass().getName().equals(GoldenApple.class.getName())) {
+            System.out.println(name + " consumed GoldenApple.");
+        }            
+        else if(consumeable.getClass().getName().equals(Pork.class.getName())) {
+            System.out.println(name + " consumed Pork.");
+        }
     }
     
 }
