@@ -63,8 +63,8 @@ public class Character implements IDamageable {
     }
     @Override
     public void receivesDamage(double amount) {
-        health = health-amount;
         System.out.println(name + " recieved 35 damage. Health:" + (health-amount) + "/" + health);
+        health = health-amount;
     }
     @Override
     public void heals(double amount) {

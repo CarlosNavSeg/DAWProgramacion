@@ -17,6 +17,6 @@ public class Human extends Race {
     }
     @Override
     public String toString() {
-        return "Human";
+        return getClass().getName();
     }
 }

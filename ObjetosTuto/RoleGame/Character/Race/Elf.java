@@ -18,7 +18,7 @@ public class Elf extends Race {
 
     @Override
     public String toString() {
-        return "Elf";
+        return getClass().getName();
     }
     
 }

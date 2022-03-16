@@ -18,6 +18,6 @@ public class Orc extends Race {
 
     @Override
     public String toString() {
-        return "Orc";
+        return getClass().getName();
     }
 }
