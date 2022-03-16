@@ -1,8 +1,5 @@
-package Race;
-import Stat.CharacterStats;
-import Stat.Constitution;
-import Stat.Dexterity;
-import Stat.Intelligence;
+package RoleGame.Character.Race;
+import RoleGame.Character.Stat.*;
 public class Elf extends Race {
 
     @Override

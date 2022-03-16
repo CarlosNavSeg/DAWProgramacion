@@ -1,8 +1,5 @@
-package Race;
-import Stat.CharacterStats;
-import Stat.Constitution;
-import Stat.Intelligence;
-import Stat.Strength;
+package RoleGame.Character.Race;
+import RoleGame.Character.Stat.*;
 public class Orc extends Race {
 
     @Override

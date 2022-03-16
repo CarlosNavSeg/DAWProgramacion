@@ -1,6 +1,5 @@
-package Race;
-
-import Stat.CharacterStats;
+package RoleGame.Character.Race;
+import RoleGame.Character.Stat.CharacterStats;
 
 public abstract class Race {
     public abstract int modifier(CharacterStats stat);
