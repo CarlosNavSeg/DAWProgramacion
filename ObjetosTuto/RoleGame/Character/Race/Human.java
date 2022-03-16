@@ -15,5 +15,8 @@ public class Human extends Race {
             }
             return stat.getValue();
     }
-    
+    @Override
+    public String toString() {
+        return "Human";
+    }
 }

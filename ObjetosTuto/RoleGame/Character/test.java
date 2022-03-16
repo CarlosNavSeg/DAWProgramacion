@@ -1,13 +1,15 @@
 package RoleGame.Character;
 import RoleGame.Character.Race.*;
-import RoleGame.Character.Stat.*;
+import RoleGame.Character.GameCharacter.Character;
+import RoleGame.Character.Job.Mage;
 public class test {
     public static void main(String[] args) {
-    Human human1 = new Human();
-    Dexterity dex = new Dexterity(0);
-    human1.modifier(dex);
+    String name = "Caudiel";
     Orc orco = new Orc();
-    orco.toString();
+    Mage mage = new Mage();
+    Character gCharacter = new Character(name, mage, orco);
+    System.out.println(gCharacter.toString());
+    gCharacter.receivesDamage(35);
     }
   
     
