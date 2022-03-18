@@ -10,5 +10,7 @@ public class Bread extends Food {
     public void consumedBy(Character character) {
         character.heals(power);
     }
-    
+
+
+
 }

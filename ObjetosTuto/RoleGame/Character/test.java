@@ -2,6 +2,8 @@ package RoleGame.Character;
 import RoleGame.Character.Race.*;
 import RoleGame.Item.Food.Apple;
 import RoleGame.Item.Food.Chicken;
+import RoleGame.Item.Food.Enchanced;
+import RoleGame.Item.Food.Poisonous;
 import RoleGame.Character.GameCharacter.Character;
 import RoleGame.Character.Job.Mage;
 public class test {
@@ -14,6 +16,8 @@ public class test {
     gCharacter.receivesDamage(35);
     RoleGame.Item.Food.Chicken ap = new Chicken();
     gCharacter.consumes(ap);
+    Poisonous poisonedEnchApple = new Poisonous(new Enchanced(new Apple()));
+    gCharacter.consumes(poisonedEnchApple);
     }
   
     
