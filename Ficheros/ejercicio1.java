@@ -34,6 +34,6 @@ public class ejercicio1 {
                     break;
             }
         }
-
+        opcionesUsuario.close();
     }
 }
