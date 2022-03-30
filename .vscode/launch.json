@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ejercicio2",
+            "request": "launch",
+            "mainClass": "Ficheros.ejercicio2",
+            "projectName": "DAWProgramacion_d3a31efd"
+        },
+        {
+            "type": "java",
             "name": "Launch ejercicio1",
             "request": "launch",
             "mainClass": "Ficheros.ejercicio1",
