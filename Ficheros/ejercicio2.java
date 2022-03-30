@@ -61,7 +61,7 @@ public class ejercicio2 {
                         // ....
 
                         System.out.println(i + ".- \t" + flags + "\t" + String.format("%-15d", nextDir.length())
-                                + formatter.format(nextDir.lastModified()) + "\t" + nextDir.getName());
+                        + formatter.format(nextDir.lastModified()) + "\t" + nextDir.getName());
                     }
                 }
             }
