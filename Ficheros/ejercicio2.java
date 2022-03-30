@@ -33,10 +33,10 @@ public class ejercicio2 {
                             flags += ("-");
                         }
                         formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM,
-                        Locale.getDefault());
+                                Locale.getDefault());
                         System.out.println(i + ".- \t" + flags + "\t" +
-                        String.format("%-15d", nextDir.length()) + formatter.format(nextDir.lastModified())
-                        + "\t" + nextDir.getName());
+                                String.format("%-15d", nextDir.length()) + formatter.format(nextDir.lastModified())
+                                + "\t" + nextDir.getName());
                     }
                     if (nextDir.isFile()) {
                         String flags = "";
@@ -61,7 +61,7 @@ public class ejercicio2 {
                         // ....
 
                         System.out.println(i + ".- \t" + flags + "\t" + String.format("%-15d", nextDir.length())
-                        + formatter.format(nextDir.lastModified()) + "\t" + nextDir.getName());
+                                + formatter.format(nextDir.lastModified()) + "\t" + nextDir.getName());
                     }
                 }
             }
