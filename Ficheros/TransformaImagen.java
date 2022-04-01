@@ -41,16 +41,14 @@ public class TransformaImagen {
         FileReader freader = new FileReader(this.f);
         File fOut = new File("/home/vagrant/fichero_o.bmp");
         FileOutputStream wout = new FileOutputStream(fOut);
-        int c = freader.read();
+        int c;
         try{
-            for (int i = 1; i < f.length(); i++) {
-                if(i > 54) {
-                c = c/2;
-                wout.write(c);
+            for (int i = 0; i < f.length(); i++) {
                 c = freader.read();
-                }
+                if(i > 53) {
+                c = c/2;
+                wout.write(c);                }
                 else {
-                    c = freader.read();
                     wout.write(c);
                 }
             }
