@@ -10,7 +10,7 @@ public class ejercicio1 {
         while (dFile.exists()) {
             System.out.println(dFile.getAbsolutePath());
             if (dFile.canRead()) {
-                for (int i = 0; i < dFile.listFiles().length; i++) {
+                for (int i = 1; i < dFile.listFiles().length; i++) {
                     File nextDir = dFile.listFiles()[i];
                     if (nextDir.isDirectory()) {
                         System.out.println(i + " - <directorio> - " + nextDir.getAbsolutePath());
@@ -23,7 +23,7 @@ public class ejercicio1 {
 
             String opcion = "";
             switch (opcion = opcionesUsuario.next()) {
-                case "1":
+                case "-1":
                     dFile = new File("");
                     break;
                 case "0":

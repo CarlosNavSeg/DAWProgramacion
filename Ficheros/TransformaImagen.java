@@ -1,9 +1,16 @@
 package Ficheros;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import java.awt.Graphics2D;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class TransformaImagen {
     File f = null;
@@ -18,7 +25,7 @@ public class TransformaImagen {
 
     public void transformaNegativo() throws IOException {
         FileReader fReader = new FileReader(this.f);
-        File fOut = new File("/home/vagrant/n_file.bmp");
+        File fOut = new File("/home/vagrant/fichero_n.bmp");
         FileOutputStream wOut = new FileOutputStream(fOut);
         int c = fReader.read();
         while(c != -1) {
@@ -29,4 +36,49 @@ public class TransformaImagen {
         fReader.close();
         wOut.close();
     }
+
+    public void transformaOscuro() throws IOException {
+        FileReader freader = new FileReader(this.f);
+        File fOut = new File("/home/vagrant/fichero_o.bmp");
+        FileOutputStream wout = new FileOutputStream(fOut);
+        int c = freader.read();
+        try{
+            for (int i = 1; i < f.length(); i++) {
+                if(i > 54) {
+                c = c/2;
+                wout.write(c);
+                c = freader.read();
+                }
+                else {
+                    c = freader.read();
+                    wout.write(c);
+                }
+            }
+
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("no hemos encontrado el fichero");
+        }
+        freader.close();
+        wout.close();
+    }
+    public void transformaNegroBlanco() throws IOException {
+        try {
+        BufferedImage image = ImageIO.read(this.f);
+        BufferedImage result = new BufferedImage(image.getHeight(),
+        image.getWidth(),
+        BufferedImage.TYPE_BYTE_BINARY);
+        Graphics2D graphic = result.createGraphics();
+            graphic.drawImage(image, 0, 0, Color.WHITE, null);
+            graphic.dispose();
+        File output = new File("/home/vagrant/fichero_nb.bmp");
+        ImageIO.write(result, "png", output);
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+            
+            
+        
+}
 }

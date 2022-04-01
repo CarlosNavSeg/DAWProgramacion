@@ -5,8 +5,7 @@ import java.io.IOException;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        File fEnt = new File("/home/vagrant/BMP-2D_IFV.bmp");
-        TransformaImagen tImagen = new TransformaImagen(fEnt);
-        tImagen.transformaNegativo();
+        TransformaImagen tImagen = new TransformaImagen(new File("/home/vagrant/images.bmp"));
+        tImagen.transformaOscuro();
     }
 }
