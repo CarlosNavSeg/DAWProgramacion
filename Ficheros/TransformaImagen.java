@@ -1,9 +1,9 @@
 package Ficheros;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -24,34 +24,37 @@ public class TransformaImagen {
     }
 
     public void transformaNegativo() throws IOException {
-        FileReader fReader = new FileReader(this.f);
+        FileInputStream fReader = new FileInputStream(this.f);
         File fOut = new File("/home/vagrant/fichero_n.bmp");
         FileOutputStream wOut = new FileOutputStream(fOut);
-        int c = fReader.read();
-        while(c != -1) {
-            c = c-255;
-            wOut.write(c);
+        byte [] cabecera = new byte[54];
+        fReader.read(cabecera);
+        wOut.write(cabecera);
+        int c;
+        for (int i = 0; i < f.length(); i++) {
             c = fReader.read();
+            c = 255 - c;
+            wOut.write(c);                
         }
         fReader.close();
         wOut.close();
     }
 
     public void transformaOscuro() throws IOException {
-        FileReader freader = new FileReader(this.f);
+        FileInputStream freader = new FileInputStream(this.f);
         File fOut = new File("/home/vagrant/fichero_o.bmp");
         FileOutputStream wout = new FileOutputStream(fOut);
         int c;
+        byte [] cabecera = new byte[54];
+        freader.read(cabecera);
+        wout.write(cabecera);
         try{
             for (int i = 0; i < f.length(); i++) {
                 c = freader.read();
-                if(i > 53) {
                 c = c/2;
-                wout.write(c);                }
-                else {
-                    wout.write(c);
-                }
+                wout.write(c);                
             }
+            
 
         }
         catch (FileNotFoundException e) {
