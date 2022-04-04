@@ -51,8 +51,7 @@ public class TransformaImagen {
         try{
             for (int i = 0; i < f.length(); i++) {
                 c = freader.read();
-                c = c/2;
-                wout.write(c);                
+                wout.write((char) c/2);                
             }
             
 
