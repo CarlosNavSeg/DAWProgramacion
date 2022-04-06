@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch textos",
+            "request": "launch",
+            "mainClass": "Ficheros.textos",
+            "projectName": "DAWProgramacion_669eb717"
+        },
+        {
+            "type": "java",
             "name": "Launch Test",
             "request": "launch",
             "mainClass": "Ficheros.Test",
