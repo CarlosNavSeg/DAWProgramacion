@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ContarRepeticiones",
+            "request": "launch",
+            "mainClass": "Ficheros.ContarRepeticiones",
+            "projectName": "DAWProgramacion_669eb717"
+        },
+        {
+            "type": "java",
             "name": "Launch textos",
             "request": "launch",
             "mainClass": "Ficheros.textos",
