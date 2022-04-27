@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch eliminarComentarios",
+            "request": "launch",
+            "mainClass": "Ficheros.eliminarComentarios",
+            "projectName": "DAWProgramacion_669eb717"
+        },
+        {
+            "type": "java",
             "name": "Launch ContarRepeticiones",
             "request": "launch",
             "mainClass": "Ficheros.ContarRepeticiones",
