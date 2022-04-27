@@ -7,6 +7,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Estadisticas",
+            "request": "launch",
+            "mainClass": "Ficheros.Estadisticas",
+            "projectName": "DAWProgramacion_669eb717"
+        },
+        {
+            "type": "java",
             "name": "Launch eliminarComentarios",
             "request": "launch",
             "mainClass": "Ficheros.eliminarComentarios",
