@@ -1,4 +1,4 @@
-package RoleGame.Character;
+package Tema5.RoleGame.Character;
 import RoleGame.Character.Race.*;
 import RoleGame.Item.Food.Apple;
 import RoleGame.Item.Food.Chicken;

@@ -1,4 +1,4 @@
-package Formas;
+package Tema5.Formas;
 import java.awt.Point;
 
 public class Forma {

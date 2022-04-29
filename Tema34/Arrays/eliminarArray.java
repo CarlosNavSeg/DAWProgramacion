@@ -1,4 +1,4 @@
-package Arrays;
+package Tema34.Arrays;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package RoleGame.Character;
+package Tema5.RoleGame.Character;
 
 public interface IDamageable {
     double maxHealth();

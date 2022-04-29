@@ -1,4 +1,4 @@
-package RoleGame.Character.Race;
+package Tema5.RoleGame.Character.Race;
 import RoleGame.Character.Stat.*;
 public class Elf extends Race {
 

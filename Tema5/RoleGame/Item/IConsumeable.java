@@ -1,4 +1,4 @@
-package RoleGame.Item;
+package Tema5.RoleGame.Item;
 
 import RoleGame.Character.GameCharacter.Character;
 

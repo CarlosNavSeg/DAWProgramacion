@@ -1,4 +1,4 @@
-package TicketMachine;
+package Tema5.TicketMachine;
 
 public class TicketMachineTest {
     public static void main(String[] args) {

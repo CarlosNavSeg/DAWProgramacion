@@ -1,4 +1,4 @@
-package RoleGame.Item.Food;
+package Tema5.RoleGame.Item.Food;
 
 import RoleGame.Character.GameCharacter.Character;
 import RoleGame.Item.IConsumeable;

@@ -1,4 +1,4 @@
-package Arrays;
+package Tema34.Arrays;
 
 class filasOColumnasNulasArray {
     public static void main(String[] args) {

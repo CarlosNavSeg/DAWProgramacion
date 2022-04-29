@@ -1,4 +1,4 @@
-package Strings;
+package Tema34.Strings;
 
 import java.util.Scanner;
 

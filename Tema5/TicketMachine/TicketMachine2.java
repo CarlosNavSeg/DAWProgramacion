@@ -1,4 +1,4 @@
-package TicketMachine;
+package Tema5.TicketMachine;
 
 public class TicketMachine2 {
     /**

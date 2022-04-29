@@ -1,4 +1,4 @@
-package RoleGame.Item.Potion;
+package Tema5.RoleGame.Item.Potion;
 
 
 public class MajorHealingPotion extends Potion{

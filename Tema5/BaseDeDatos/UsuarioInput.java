@@ -1,4 +1,4 @@
-package BaseDeDatos;
+package Tema5.BaseDeDatos;
 
 
 import javax.swing.JOptionPane;

@@ -1,4 +1,4 @@
-package Strings;
+package Tema34.Strings;
 
 public class ejecuicionStrings {
     public static void main(String[] args) {

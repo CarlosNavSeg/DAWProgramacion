@@ -1,4 +1,4 @@
-package RoleGame.Character.Job;
+package Tema5.RoleGame.Character.Job;
 import RoleGame.Character.Stat.*;
 
 public class Warrior extends Job {

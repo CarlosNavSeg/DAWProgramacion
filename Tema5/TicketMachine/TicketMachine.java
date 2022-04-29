@@ -1,4 +1,4 @@
-package TicketMachine;
+package Tema5.TicketMachine;
 /**
  * TicketMachine models a naive ticket machine that issues
  * flat-fare tickets.

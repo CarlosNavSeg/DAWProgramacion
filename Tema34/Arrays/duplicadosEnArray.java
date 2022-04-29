@@ -1,4 +1,4 @@
-package Arrays;
+package Tema34.Arrays;
 
 public class duplicadosEnArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package RoleGame.Item.Food;
+package Tema5.RoleGame.Item.Food;
 
 public class Poisonous extends Decorator {
 

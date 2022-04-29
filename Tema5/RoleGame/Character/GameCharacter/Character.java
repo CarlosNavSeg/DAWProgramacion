@@ -1,4 +1,4 @@
-package RoleGame.Character.GameCharacter;
+package Tema5.RoleGame.Character.GameCharacter;
 import RoleGame.Character.IDamageable;
 import RoleGame.Character.Job.*;
 import RoleGame.Character.Stat.*;

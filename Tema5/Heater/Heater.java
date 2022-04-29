@@ -1,4 +1,4 @@
-package Heater;
+package Tema5.Heater;
 
 public class Heater {
     // Atributos

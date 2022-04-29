@@ -1,4 +1,4 @@
-package RoleGame.Character.Stat;
+package Tema5.RoleGame.Character.Stat;
 
 public class Dexterity extends CharacterStats {
 

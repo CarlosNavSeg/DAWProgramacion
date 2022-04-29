@@ -1,4 +1,4 @@
-package RoleGame.Item.Potion;
+package Tema5.RoleGame.Item.Potion;
 
 import RoleGame.Character.GameCharacter.Character;
 import RoleGame.Item.IConsumeable;

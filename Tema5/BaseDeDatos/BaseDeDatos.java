@@ -1,4 +1,4 @@
-package BaseDeDatos;
+package Tema5.BaseDeDatos;
 
 import java.io.FileWriter;
 import java.io.IOException;

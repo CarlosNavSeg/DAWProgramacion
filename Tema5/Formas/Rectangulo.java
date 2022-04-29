@@ -1,4 +1,4 @@
-package Formas;
+package Tema5.Formas;
 
 public class Rectangulo extends Forma {
 

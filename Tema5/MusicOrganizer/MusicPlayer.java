@@ -1,4 +1,4 @@
-package MusicOrganizer;
+package Tema5.MusicOrganizer;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;

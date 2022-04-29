@@ -1,4 +1,4 @@
-package Reloj;
+package Tema5.Reloj;
 
 /**
  * The NumberDisplay class represents a digital number display that can hold
