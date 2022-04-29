@@ -1,4 +1,4 @@
-package Ficheros;
+package Tema6;
 
 import java.io.File;
 import java.text.DateFormat;
