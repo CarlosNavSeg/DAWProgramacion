@@ -32,13 +32,11 @@ public class Estadisticas {
                 else if (nextLine.charAt(i) == ' ') {
                     numeroDePalabras++;
                 }
-                else if(nextLine.charAt(i) == '\n') {
-                    numeroDeTabuladores++;
-                }
                 else {
                     numeroDeConsonantes++;
                 }
             }
+            numeroDeTabuladores++;
         } while(bReader.ready());
 
         System.out.println("Numero de palabras:"+ numeroDePalabras + " Porcentaje de consonantes: "+((numeroDeConsonantes*100)/numeroDeLetras)+
