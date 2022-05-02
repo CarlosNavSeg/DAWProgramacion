@@ -62,6 +62,7 @@ public class PersistenciaCliente {
                 int idAtributos = Integer.parseInt(atributos[1]);
                 clientes.add(new Cliente(atributos[3],idAtributos, atributos[2], atributos[4], atributos[0]));
             }
+            bfReader.close();
         }
         catch(FileNotFoundException e) {
             e.printStackTrace();
