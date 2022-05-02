@@ -42,7 +42,7 @@ public class PersistenciaCliente {
         }
     }
 
-    public static void read(File f) throws IOException {
+    public static ArrayList<Cliente> read(File f) throws IOException {
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         try {
             BufferedReader bfReader = new BufferedReader(new FileReader(f));
@@ -67,6 +67,7 @@ public class PersistenciaCliente {
         catch(FileNotFoundException e) {
             e.printStackTrace();
         }
+        return clientes;
     }
     public static void main(String[] args) throws IOException {
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
