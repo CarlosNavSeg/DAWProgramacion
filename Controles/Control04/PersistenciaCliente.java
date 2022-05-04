@@ -75,8 +75,7 @@ public class PersistenciaCliente {
         Cliente r = new Cliente("Javier", 1, "Segarra", "3719213R", "tehascompraolayoquesé@xd.com");
         clientes.add(f);
         clientes.add(r);
-        write(clientes);
-        File e = new File("./clientes.dat");
-        read(e);
+        PersistenciaClienteSerializacion.write(clientes);    
+        PersistenciaClienteSerializacion.read(new File("clientes"));
     }
 }

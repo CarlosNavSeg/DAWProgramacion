@@ -1,5 +1,7 @@
 package Control04;
 
+import java.io.Serializable;
+
 public class Cliente extends Persona {
     protected int id;
     protected String email;

@@ -1,6 +1,8 @@
 package Control04;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable{
     protected String nif;
     protected String nombre;
     protected String apellidos;
