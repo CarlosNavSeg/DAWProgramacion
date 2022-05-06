@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
 
 public class PersistenciaCliente {
     public static void write(ArrayList<Cliente> arrayListClientes) {
@@ -69,7 +72,7 @@ public class PersistenciaCliente {
         }
         return clientes;
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException {
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         Cliente f = new Cliente("Carlos", 0, "Navarro", "53446717R", "postauqeuis@gmail.com");
         Cliente r = new Cliente("Javier", 1, "Segarra", "3719213R", "tehascompraolayoquesé@xd.com");
@@ -77,5 +80,6 @@ public class PersistenciaCliente {
         clientes.add(r);
         PersistenciaClienteSerializacion.write(clientes);    
         PersistenciaClienteSerializacion.read(new File("clientes"));
+        ParserXMLCliente.write();
     }
 }
