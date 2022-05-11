@@ -12,6 +12,8 @@ import java.util.Iterator;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
+import org.xml.sax.SAXException;
+
 
 public class PersistenciaCliente {
     public static void write(ArrayList<Cliente> arrayListClientes) {
@@ -72,7 +74,7 @@ public class PersistenciaCliente {
         }
         return clientes;
     }
-    public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException {
+    public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException, SAXException {
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         Cliente f = new Cliente("Carlos", 0, "Navarro", "53446717R", "postauqeuis@gmail.com");
         Cliente r = new Cliente("Javier", 1, "Segarra", "3719213R", "tehascompraolayoquesé@xd.com");
@@ -82,6 +84,7 @@ public class PersistenciaCliente {
         PersistenciaClienteSerializacion.read(new File("clientes"));
         ParserXMLCliente.write();*/        
         ParserJsonCliente pjCliente = new ParserJsonCliente();
-        pjCliente.write(clientes);
+        //*pjCliente.write(clientes);
+        ParserXMLCliente.readAndExtract(new File("book.xml"));
     }
 }
