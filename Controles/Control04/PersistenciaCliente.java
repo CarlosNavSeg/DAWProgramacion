@@ -78,8 +78,10 @@ public class PersistenciaCliente {
         Cliente r = new Cliente("Javier", 1, "Segarra", "3719213R", "tehascompraolayoquesé@xd.com");
         clientes.add(f);
         clientes.add(r);
-        PersistenciaClienteSerializacion.write(clientes);    
+        /*PersistenciaClienteSerializacion.write(clientes);    
         PersistenciaClienteSerializacion.read(new File("clientes"));
-        ParserXMLCliente.write();
+        ParserXMLCliente.write();*/        
+        ParserJsonCliente pjCliente = new ParserJsonCliente();
+        pjCliente.write(clientes);
     }
 }

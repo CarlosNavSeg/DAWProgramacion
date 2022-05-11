@@ -1,6 +1,9 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/home/vagrant/Descargas/gson-2.8.9.jar"
+        "/home/vagrant/Descargas/gson-2.8.9.jar",
+        "/home/vagrant/Descargas/jackson-annotations-2.13.2.jar",
+        "/home/vagrant/Descargas/jackson-core-2.13.2.jar",
+        "/home/vagrant/Descargas/jackson-databind-2.13.2.2.jar"
     ]
 }
