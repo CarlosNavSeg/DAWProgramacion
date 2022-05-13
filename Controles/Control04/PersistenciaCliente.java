@@ -75,16 +75,17 @@ public class PersistenciaCliente {
         return clientes;
     }
     public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException, SAXException {
-        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        /*ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         Cliente f = new Cliente("Carlos", 0, "Navarro", "53446717R", "postauqeuis@gmail.com");
         Cliente r = new Cliente("Javier", 1, "Segarra", "3719213R", "tehascompraolayoquesé@xd.com");
         clientes.add(f);
         clientes.add(r);
-        /*PersistenciaClienteSerializacion.write(clientes);    
+        PersistenciaClienteSerializacion.write(clientes);    
         PersistenciaClienteSerializacion.read(new File("clientes"));
-        ParserXMLCliente.write();*/        
-        ParserJsonCliente pjCliente = new ParserJsonCliente();
-        //*pjCliente.write(clientes);
-        ParserXMLCliente.readAndExtract(new File("book.xml"));
+        ParserXMLCliente.write();
+        arserJsonCliente pjCliente = new ParserJsonCliente();
+        pjCliente.write(clientes);
+        ParserXMLCliente.readAndExtract(new File("book.xml"));*/
+        ParserSource.imprimeUrlAndSrc();
     }
 }
