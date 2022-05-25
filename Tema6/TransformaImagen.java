@@ -1,4 +1,3 @@
-package Tema6;
 
 import java.io.File;
 import java.io.FileInputStream;
